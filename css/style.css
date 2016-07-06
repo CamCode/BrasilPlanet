@@ -565,11 +565,11 @@ footer .item-map .icon img{
   right: -73px;
   width: 25%;
   background: rgba(116, 114, 114, 0.9);
-  pointer-events: none;
   opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;  
   padding: 5px;
+  z-index: 9999;
 }
 
 #provinceInfo.show p {
@@ -595,6 +595,15 @@ footer .item-map .icon img{
   margin: 4px;
   text-align: justify;
 }
+
+#brasil-map a {
+  color: #fff;
+  font-size: 0.7em;
+  margin: 4px;
+  text-align: justify;
+  text-decoration: none;
+}
+
  #provinceInfo img {
   width: 100%;
 }
