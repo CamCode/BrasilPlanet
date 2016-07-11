@@ -37,7 +37,7 @@ $(document).ready(function(){
             $('.button-coti-2').addClass('hide');
             $('.button-coti-1').removeClass('hide');    
         }
-        console.log($('.table-wrap').position().top);
+        
     
     });
 
@@ -158,10 +158,10 @@ scaleVideoContainer();
 });*/
 
 
-var canadamap = document.getElementById("canada-map");
+var brasilmap = document.getElementById("brasil-map");
     provinceInfo = document.getElementById("provinceInfo");
     allProvinces = document.querySelectorAll(".zone_map");
-    canadamap.addEventListener("click", function(e){ 
+    brasilmap.addEventListener("click", function(e){ 
         var province = e.target.parentNode;
         if(e.target.nodeName == "path") {
         for (var i=0; i < allProvinces.length; i++) {
