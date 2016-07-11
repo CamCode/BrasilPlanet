@@ -595,7 +595,12 @@ footer .item-map .icon img{
   margin: 4px;
   text-align: justify;
 }
-
+#provinceInfo ul{
+    color: #fff;
+  font-size: 0.7em;
+  text-align: justify;
+  text-decoration: none;
+}
 #provinceInfo a {
   color: #fff;
   font-size: 1em;
@@ -603,6 +608,11 @@ footer .item-map .icon img{
   text-align: justify;
   text-decoration: none;
 }
+#provinceInfo .img-clima{
+    width: 85%;
+    margin: 2px auto;
+}
+
 
  #provinceInfo img {
   width: 100%;
