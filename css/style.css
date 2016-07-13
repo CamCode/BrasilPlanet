@@ -596,6 +596,7 @@ footer .item-map .icon img{
 #provinceInfo ul{
     color: #fff;
   font-size: 0.7em;
+      padding: 0px;
   text-align: justify;
   text-decoration: none;
 }
