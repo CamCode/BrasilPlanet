@@ -718,13 +718,16 @@ footer .item-map .icon img{
 .box-option-wrap .box-option .description .items a{
     text-decoration: none;
     font-weight: normal;
+    display: block;
+    padding: 1px;
     color: #000;
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
 }
 .box-option-wrap .box-option .description .items a:hover{
-    font-weight: bold;
+    background-color: #82E6D7;
 }
+
 .box-option-wrap .box-option .description .items li{
     margin: 3px;
 }
@@ -2055,6 +2058,9 @@ footer .item-map .icon img{
     .box-option-wrap .box-option .description .items li {
         margin: 5px;
         font-size: 0.8em;
+    }
+    .box-option-wrap .box-option .description .items a:hover li{
+        background-color: #82E6D7;
     }
 
     .box-option-wrap .box-option .type .txt {
