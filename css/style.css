@@ -369,6 +369,7 @@ background: #9B4534;
 }
 .img-wrap .item-img:hover  .hover-img{
     opacity: 1;
+    background-color: rgba(0,0,0,0.5);
 }
 .img-wrap .item-img{
     display: inline-block;
@@ -387,10 +388,10 @@ background: #9B4534;
     right: 0%;
     color: #fff;
     font-size: 0.8em;
-    opacity: 0;
+    opacity: 1;
     text-align: center;
     font-style: bold;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.2);
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
 }
