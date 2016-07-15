@@ -573,9 +573,9 @@ footer .item-map .icon img{
 }
 
 #provinceInfo.show p {
-    color: #666 !important;
+    color: #000 !important;
     margin-bottom: 4px;
-    font-size: 1.1em;
+    font-size: 0.8em;
   }
 
 #provinceInfo.show {
@@ -591,24 +591,28 @@ footer .item-map .icon img{
 }
 
 #provinceInfo p {
-  color: #666;
+  color: #000;
   text-align: justify;
 }
 #provinceInfo ul{
-    color: #666;
+    color: #000;
   font-size: 1em;
       padding: 0px;
   text-align: left;
   text-decoration: none;
 }
 #provinceInfo a {
-  color: #666;
-  font-size: 1.1em;
+  color: #000;
+  font-size: 0.8em;
     margin: 5px 12px;
     display: block;
     padding: 0px;
   text-decoration: none;
 }
+#provinceInfo a:hover {
+ background-color: #82E6D7;
+}
+    
 #provinceInfo .img-clima{
     width: 85%;
     margin: 2px auto;
