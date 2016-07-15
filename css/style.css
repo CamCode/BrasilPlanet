@@ -301,8 +301,8 @@ background: #9B4534;
     bottom: 0;
 }
 .video-container video.fillWidth {
-    width: 100%!important;
-    height: 164%!important;
+    width: 108%!important;
+    height: 122%!important;
     margin-left: 0px !important;
 }
 
@@ -312,7 +312,7 @@ background: #9B4534;
     display: block;
    margin-top: -15px;
    overflow: hidden;
-   height: 37vw;
+   height: 50vw;
 
 }
 .vitrina-principal img{
@@ -1422,7 +1422,7 @@ footer .item-map .icon img{
         display: block;
         margin-top: -15px;
         overflow: hidden;
-        height: 37vw;
+        height: 47vw;
     }
     .vitrina-principal img {
     width: 100%;
@@ -1516,7 +1516,7 @@ footer .item-map .icon img{
     }
     .video-container video.fillWidth {
         width: 100%!important;
-        height: 165%!important;
+        height: 105%!important;
         margin-left: 0px !important;
     }
     .vitrina-principal .title-vtr .txt1 {
@@ -1620,7 +1620,7 @@ footer .item-map .icon img{
     }
     .video-container video.fillWidth {
     width: 100%!important;
-    height: 165%!important;
+    height: 164%!important;
     margin-left: 0px !important;
     }
 
