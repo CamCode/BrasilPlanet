@@ -32,9 +32,9 @@ footer .type{text-transform:uppercase}footer .item-map .icon{width:52%;margin:10
 .ruta_nav .logo{margin:auto;width:38%}.mapa-destinos{width:88%;margin:15px auto;background-image:url(../img/destinos/mapa/bg.jpg);background-size:contain;background-position:50% 0;background-repeat:no-repeat;margin:auto;border:0;position:relative}
 .mapa-wrap{margin:auto;width:98%;text-align:center}#brasil-map{fill:#487ffa}#brasil-map .zone_map{-webkit-transition:.3s;transition:.3s;-webkit-filter:grayscale(0%);filter:grayscale(0%)}
 #brasil-map .zone_map:hover{cursor:pointer;filter:Gray();-webkit-filter:grayscale(100%);filter:grayscale(100%)}#brasil-map .active{filter:Gray();-webkit-filter:grayscale(100%);filter:grayscale(100%)}
-#provinceInfo{position:absolute;top:-14px;right:-73px;width:25%;background:rgba(116,114,114,0.9);opacity:0;-webkit-transition:1s;transition:1s;padding:5px}
-#provinceInfo.show p{color:#fff!important;margin-bottom:4px;font-size:1em}#provinceInfo.show{opacity:1}#provinceInfo h1{color:#fff;font-weight:700;font-size:1.5em;margin:2px;font-weight:700}
-#provinceInfo p{color:#fff;text-align:justify}#provinceInfo ul{color:#fff;font-size:.7em;padding:0;text-align:justify;text-decoration:none}#provinceInfo a{color:#fff;font-size:1em;margin:5px 12px;display:block;padding:0;text-decoration:none}
+#provinceInfo{position:absolute;top:-14px;right:-73px;width:25%;background-color:#f0f1f1;opacity:0;-webkit-transition:1s;transition:1s;padding:5px}#provinceInfo.show p{color:#fff!important;margin-bottom:4px;font-size:1em}
+#provinceInfo.show{opacity:1}#provinceInfo h1{color:#487ffa;font-weight:700;font-size:1.5em;margin:2px;font-weight:700}#provinceInfo p{color:#666;text-align:justify}
+#provinceInfo ul{color:#666;font-size:.7em;padding:0;text-align:justify;text-decoration:none}#provinceInfo a{color:#666;font-size:1em;margin:5px 12px;display:block;padding:0;text-decoration:none}
 #provinceInfo .img-clima{width:85%;margin:2px auto}#provinceInfo img{width:100%}@media all and (max-width:800px){#provinceInfo{width:40%}}@media all and (max-width:750px){#provinceInfo{width:100%;position:static;background:0}
 }.box-option-wrap{width:80%;margin:20px auto}.box-option-wrap .box-option{width:23%;margin:10px 5px;padding:5px;overflow:hidden;box-sizing:border-box;background-color:#f0f1f1;display:inline-block;vertical-align:top;text-decoration:none;border:3px solid #f0f1f1}
 .box-option-wrap .box-option .type{display:block;text-decoration:none}.box-option-wrap .box-option .type .icons{display:inline-block;text-align:left;width:30%;vertical-align:top}

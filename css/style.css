@@ -565,7 +565,7 @@ footer .item-map .icon img{
   top: -14px;
   right: -73px;
   width: 25%;
-  background: rgba(116, 114, 114, 0.9);
+  background-color: #F0F1F1;
   opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;  
@@ -583,7 +583,7 @@ footer .item-map .icon img{
 }
 
 #provinceInfo h1 {
-  color: #fff;
+  color: #487FFA;
   font-weight: 700;
   font-size: 1.5em;
   margin: 2px;
@@ -591,18 +591,18 @@ footer .item-map .icon img{
 }
 
 #provinceInfo p {
-  color: #fff;
+  color: #666;
   text-align: justify;
 }
 #provinceInfo ul{
-    color: #fff;
+    color: #666;
   font-size: 0.7em;
       padding: 0px;
   text-align: justify;
   text-decoration: none;
 }
 #provinceInfo a {
-  color: #fff;
+  color: #666;
   font-size: 1em;
     margin: 5px 12px;
     display: block;
