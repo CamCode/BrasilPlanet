@@ -514,7 +514,7 @@ footer .item-map .icon img{
 
 /*MAPA DINAMICO*/
 .mapa-destinos{
-    width: 100%;
+    width: 88%;
     margin: 15px auto;
     background-image: url(../img/destinos/mapa/bg.jpg);
     background-size: contain;
@@ -526,7 +526,7 @@ footer .item-map .icon img{
 }
 .mapa-wrap{
     margin: auto;
-    width: 75%;
+    width: 98%;
     text-align: center;
 }
 #brasil-map {
