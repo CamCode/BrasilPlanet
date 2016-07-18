@@ -881,7 +881,7 @@ footer .item-map .icon img{
     transition: 0.3s ease-in-out;
 }
 .nav-plan .plan-item .plan-title-one:hover{
-    border-bottom: 2px solid #487FFA;
+    background-color: #82E6D7;
 }
 .nav-plan .plan-item .plan-items .active_lat{
     width: 100%;

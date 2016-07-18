@@ -98,6 +98,42 @@ $(document).ready(function(){
                 $('.items_mob').slideUp();
              });
 
+        /*pop up imagenes*/
+
+    $("a.icon-transp").fancybox({
+        padding: 0,
+
+                openEffect : 'elastic',
+                openSpeed  : 500,
+
+                closeEffect : 'elastic',
+                closeSpeed  :500,
+
+                //closeClick : true,
+                showCloseButton  : true,
+                fitToView: false,
+   
+
+                helpers : {
+                    overlay : null
+                }
+    }); 
+
+    /*galeria de imagenes destinos */
+    $(".fancybox-thumb").fancybox({
+        prevEffect  : 'none',
+        nextEffect  : 'none',
+        helpers : {
+            title   : {
+                type: 'outside'
+            },
+            thumbs  : {
+                width   : 50,
+                height  : 50
+            }
+        }
+    });
+
     
 
     
