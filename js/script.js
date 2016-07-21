@@ -9,7 +9,32 @@ $(document).ready(function(){
 	  	autoplay: true,
 	  	pauseOnHover:false,
         arrows:true,
-        autoplaySpeed:7000
+        autoplaySpeed:7000,
+        responsive: [           
+            {
+              breakpoint: 780,
+              settings: {
+                dots: false,
+                arrows: false,
+                infinite: false,
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                dots: false,
+                arrows: false,
+                infinite: false,
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
 	  });
 
     $('.vitrina-principal').on('beforeChange', function(event, slick, currentSlide){
@@ -111,12 +136,12 @@ $(document).ready(function(){
 
                 //closeClick : true,
                 showCloseButton  : true,
-                fitToView: false 
+                fitToView: true 
 
                
     }); 
 
-    /*galeria de imagenes destinos */
+    /*galeria de imagenes destinos 
     $(".fancybox-thumb").fancybox({
         prevEffect  : 'none',
         nextEffect  : 'none',
@@ -124,12 +149,12 @@ $(document).ready(function(){
             title   : {
                 type: 'outside'
             }
-            /*thumbs  : {
+           thumbs  : {
                 width   : 50,
                 height  : 50
-            }*/
+            }
         }
-    });
+    });*/
 
     
 
