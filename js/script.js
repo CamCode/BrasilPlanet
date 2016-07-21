@@ -21,7 +21,7 @@ $(document).ready(function(){
 	   //menu fixed
 	var nav = $('nav');
    
-    $(window).scroll(function () {
+   /* $(window).scroll(function () {
         if ($(this).scrollTop() > 136) {
             nav.addClass("f-nav");
         } else {
@@ -39,7 +39,7 @@ $(document).ready(function(){
         }
         
     
-    });
+    });*/
 
 
      
@@ -111,12 +111,9 @@ $(document).ready(function(){
 
                 //closeClick : true,
                 showCloseButton  : true,
-                fitToView: false,
-   
+                fitToView: false 
 
-                helpers : {
-                    overlay : null
-                }
+               
     }); 
 
     /*galeria de imagenes destinos */
@@ -126,11 +123,11 @@ $(document).ready(function(){
         helpers : {
             title   : {
                 type: 'outside'
-            },
-            thumbs  : {
+            }
+            /*thumbs  : {
                 width   : 50,
                 height  : 50
-            }
+            }*/
         }
     });
 
