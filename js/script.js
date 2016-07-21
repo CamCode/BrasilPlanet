@@ -232,12 +232,21 @@ var brasilmap = document.getElementById("brasil-map");
         sourceImg = province.querySelector("img"),
         imgPath = "img/destinos/mapa/";
         provinceInfo.innerHTML = "";
-        provinceInfo.insertAdjacentHTML("afterbegin", "<img src="+imgPath + sourceImg.getAttribute('xlink:href')+" alt='"+sourceImg.getAttribute('alt')+"'><h1>"+provinceName+"</h1><ul>"+provincePara.innerHTML+"</ul></div class='img-clima'>"+provinceClima.innerHTML+"</div>");
+        provinceInfo.insertAdjacentHTML("afterbegin", "<a href='' id='close-btn'  onclick='cerrar()' style='display:block;background-image: url(css/fancybox_sprite.png);position: absolute ;top: -18px;right: -18px;    width: 36px;    height: 36px;   cursor: pointer;    z-index: 8040;'></a><img src="+imgPath + sourceImg.getAttribute('xlink:href')+" alt='"+sourceImg.getAttribute('alt')+"'><h1>"+provinceName+"</h1><ul>"+provincePara.innerHTML+"</ul></div class='img-clima'>"+provinceClima.innerHTML+"</div>");
         provinceInfo.classList.add("show");
         }
     });
 
-   /* $(".zone_map").click(function() {
+            function cerrar(){
+                document.querySelectorAll(".show").style.opacity = '0';
+            }
+
+/*$('#close-btn').click(function(){
+    $('#provinceInfo.show').css('opacity','0');
+});
+
+
+    $(".zone_map").click(function() {
         var items = document.getElementsByClassName('.zone_map');
         for (var i = 0; i < items.length; i++){
 

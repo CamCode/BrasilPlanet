@@ -528,6 +528,7 @@ footer .item-map .icon img{
     margin: auto;
     width: 98%;
     text-align: center;
+    position: relative;
 }
 #brasil-map {
   fill: #487FFA;
@@ -621,6 +622,17 @@ footer .item-map .icon img{
 
  #provinceInfo img {
   width: 100%;
+}
+.mapa-wrap .names-zone{
+    width: 80%;
+    margin: auto;
+}
+
+.mapa-wrap .name-z{
+    position: absolute;
+    text-shadow: 2px 0px 3px rgb(0, 0, 0);
+    color: #fff;
+    font-size: 15px;
 }
 
 
@@ -859,7 +871,7 @@ footer .item-map .icon img{
    
 }
 .nav-plan .plan-item .plan-items a li{
-   width: 100%;
+   width: 95%;
    padding:5px;
      -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
@@ -885,15 +897,9 @@ footer .item-map .icon img{
 }
 .nav-plan .plan-item .plan-items .active_lat{
     width: 100%;
-    background-color: #82E6D7;
-  
+    background-color: #82E6D7;  
 }
-.nav-plan .plan-item .plan-items .active_lat li{
-      border-bottom: 2px solid #82E6D7;
-}
-.nav-plan .plan-item .plan-items .active_lat:hover li{
-     border-bottom: 2px solid #82E6D7;
-}
+
 
 /*dias descripcion e imagenes*/
 .description-plan-wrap{
@@ -1040,7 +1046,7 @@ footer .item-map .icon img{
 }
    
 .day-plan-left .day-images-wrap .img-s{
-    margin: 10px;
+    margin: 12px;
     display: inline-block;
     width: 46%;
     height: 44%;
