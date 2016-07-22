@@ -619,7 +619,9 @@ footer .item-map .icon img{
     margin: 2px auto;
 }
 
-
+#close-btn{
+    background-color: transparent!important;
+}
  #provinceInfo img {
   width: 100%;
 }
@@ -633,6 +635,13 @@ footer .item-map .icon img{
     text-shadow: 2px 0px 3px rgb(0, 0, 0);
     color: #fff;
     font-size: 15px;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.5);
+    display: block;
+    border-radius: 25px;
+}
+.mapa-wrap .name-z .fa{
+     color: #19d9cb;
 }
 
 
