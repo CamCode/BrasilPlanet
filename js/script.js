@@ -12,17 +12,7 @@ $(document).ready(function(){
         autoplaySpeed:7000,
         responsive: [           
             {
-              breakpoint: 780,
-              settings: {
-                dots: false,
-                arrows: false,
-                infinite: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            },
-            {
-              breakpoint: 480,
+              breakpoint: 600,
               settings: {
                 dots: false,
                 arrows: false,
@@ -43,31 +33,8 @@ $(document).ready(function(){
       }
     });
 
-	   //menu fixed
-	var nav = $('nav');
-   
-   /* $(window).scroll(function () {
-        if ($(this).scrollTop() > 136) {
-            nav.addClass("f-nav");
-        } else {
-            nav.removeClass("f-nav");
-        }
+    //slider 2 index.html
 
-        if ($('body').scrollTop() > $('.table-wrap').position().top) {
-
-            $('.button-coti-1').addClass('hide');
-            $('.button-coti-2').removeClass('hide');   
-            console.log('formulario');         
-        } else{    
-            $('.button-coti-2').addClass('hide');
-            $('.button-coti-1').removeClass('hide');    
-        }
-        
-    
-    });*/
-
-
-     
      $('.img-wrap').slick({
         infinite: true,
         slidesToShow: 4,
@@ -107,11 +74,41 @@ $(document).ready(function(){
         });
 
 
-     $('.button-coti-1').click(function(){
+	//menu fixed
+	var nav = $('nav');
+   $(window).scroll(function () {
+    //muestra menu al hacer scroll
+        if ($(this).scrollTop() > 136) {
+            nav.addClass("f-nav");
+        } else {
+            nav.removeClass("f-nav");
+        }
+
+        //aparece el boton 2 al llegar al formulario
+
+        if ($(window).scrollTop() > $('.table-wrap').position().top) {
+
+            $('.button-coti-1').addClass('hide');
+            $('.button-coti-2').removeClass('hide');   
+            console.log('formulario');         
+        } else{    
+            $('.button-coti-2').addClass('hide');
+            $('.button-coti-1').removeClass('hide');    
+        } 
+        
+    
+    });
+
+   //al hacer click en el boton 1 baja hasta el formulario
+
+    $('.button-coti-1').click(function(){
         $('html, body').animate({
             scrollTop: $(".table-wrap").offset().top
         }, 1000);
      });
+    
+
+    
 
       /*Menu para mobile*/
          $('.items_mob').hide();
@@ -123,8 +120,7 @@ $(document).ready(function(){
                 $('.items_mob').slideUp();
              });
 
-        /*pop up imagenes*/
-
+    /*pop up imagenes transporte*/
     $("a.icon-transp").fancybox({
         padding: 0,
 
@@ -141,15 +137,15 @@ $(document).ready(function(){
                
     }); 
 
-    
 
-    /*galeria de imagenes destinos */
+
+    /*galeria de imagenes hoteles destinos */
     $(".fancybox-thumb").fancybox({
         prevEffect  : 'none',
         nextEffect  : 'none',
         fitToView: true,
         width       : '40%',
-        height      : '40%',
+        height      : '20%',
         autoSize    : false,
         helpers : {
             title   : {
@@ -158,6 +154,11 @@ $(document).ready(function(){
            thumbs  : {
                 width   : 50,
                 height  : 50
+            },
+           overlay : {
+                css : {
+                    'background' : 'rgba(0, 0, 0, 0.95)'
+                }
             }
         }
     });

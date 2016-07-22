@@ -19,7 +19,7 @@
 
 .fancybox-wrap {
 	position: absolute;
-	top: 0;
+	top: 60px;
 	left: 0;
 	z-index: 8020;
 }
@@ -36,6 +36,7 @@
 
 .fancybox-opened {
 	z-index: 8030;
+	max-height: 70%!important;
 }
 
 .fancybox-opened .fancybox-skin {
