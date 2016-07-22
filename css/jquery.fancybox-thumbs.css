@@ -1,14 +1,15 @@
 #fancybox-thumbs {
 	position: fixed;
-	width: 70%;
-    left: 50%;
-    margin-left: -35%;
-	overflow: hidden;
-	z-index: 8050;
+    width: 50%;
+    left: 26%;
+    right: 50%;
+    overflow: hidden;
+    z-index: 8050;
+    text-align: center;
 }
 
 #fancybox-thumbs.bottom {
-	bottom: 85px;
+	bottom: 15%;
 }
 
 #fancybox-thumbs.top {
@@ -20,16 +21,20 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	left: 0%;
+    right: 45%;
+    width: auto!important;
+    left: 27%!important;
 }
 
 #fancybox-thumbs ul li {
 	float: left;
 	padding: 1px;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 #fancybox-thumbs ul li.active {
-	opacity: 0.75;
+	opacity: 0.9;
 	padding: 0;
 	border: 1px solid #fff;
 }
@@ -42,7 +47,7 @@
 	display: block;
 	position: relative;
 	overflow: hidden;
-	border: 1px solid #222;
+	border: 1px solid #1FE4D2;
 	background: #111;
 	outline: none;
 }

@@ -634,11 +634,11 @@ footer .item-map .icon img{
     position: absolute;
     text-shadow: 2px 0px 3px rgb(0, 0, 0);
     color: #fff;
-    font-size: 15px;
-    padding: 5px;
+    font-size: 0.7em;
+    padding: 5px 9px;
     background-color: rgba(0,0,0,0.5);
     display: block;
-    border-radius: 25px;
+    border-radius: 17px;
 }
 .mapa-wrap .name-z .fa{
      color: #19d9cb;
@@ -1236,6 +1236,15 @@ footer .item-map .icon img{
 .table-wrap .table-info-row .img-table-info .img{
     position: relative;
     overflow: hidden;
+    height: 180px;
+    width: 100%;
+    margin: auto;
+    border: 3px solid white;
+     -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+.table-wrap .table-info-row .img-table-info .img:hover{
+    border: 3px solid #1fe4d2;
 }
 .table-wrap .table-info-row .img-table-info .img img{
     width: 100%;

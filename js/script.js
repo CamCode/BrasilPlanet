@@ -110,7 +110,7 @@ $(document).ready(function(){
      $('.button-coti-1').click(function(){
         $('html, body').animate({
             scrollTop: $(".table-wrap").offset().top
-        }, 700);
+        }, 1000);
      });
 
       /*Menu para mobile*/
@@ -141,20 +141,26 @@ $(document).ready(function(){
                
     }); 
 
-    /*galeria de imagenes destinos 
+    
+
+    /*galeria de imagenes destinos */
     $(".fancybox-thumb").fancybox({
         prevEffect  : 'none',
         nextEffect  : 'none',
+        fitToView: true,
+        width       : '40%',
+        height      : '40%',
+        autoSize    : false,
         helpers : {
             title   : {
                 type: 'outside'
-            }
+            },
            thumbs  : {
                 width   : 50,
                 height  : 50
             }
         }
-    });*/
+    });
 
     
 
