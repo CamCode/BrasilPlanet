@@ -34,7 +34,7 @@ footer .type{text-transform:uppercase}footer .item-map .icon{width:52%;margin:10
 #brasil-map .zone_map:hover{cursor:pointer;filter:Gray();-webkit-filter:grayscale(100%);filter:grayscale(100%)}#brasil-map .active{filter:Gray();-webkit-filter:grayscale(100%);filter:grayscale(100%)}
 #provinceInfo{position:absolute;top:-14px;right:-73px;width:25%;background-color:#f0f1f1;opacity:0;-webkit-transition:1s;transition:1s;padding:5px}#provinceInfo.show p{color:#000!important;margin-bottom:4px;font-size:.8em}
 #provinceInfo.show{opacity:1}#provinceInfo h1{color:#487ffa;font-weight:700;font-size:1.5em;margin:2px;font-weight:700}#provinceInfo p{color:#000;text-align:justify}
-#provinceInfo ul{color:#000;font-size:1em;padding:0;text-align:left;text-decoration:none}#provinceInfo a{color:#000;font-size:.8em;margin:5px 12px;display:block;padding:0;text-decoration:none}
+#provinceInfo ul{color:#000;font-size:1em;padding:0;text-align:left;text-decoration:none}#provinceInfo a{color:#000;font-size:.8em;margin:5px 12px;display:block;padding:0 5px;text-decoration:none}
 #provinceInfo a:hover{background-color:#82e6d7}#provinceInfo .img-clima{width:85%;margin:2px auto}#close-btn{background-color:transparent!important}#provinceInfo img{width:100%}
 .mapa-wrap .names-zone{width:80%;margin:auto}.mapa-wrap .name-z{position:absolute;text-shadow:2px 0 3px #000;color:#fff;font-size:15px;padding:5px;background-color:rgba(0,0,0,0.5);display:block;border-radius:25px}
 .mapa-wrap .name-z .fa{color:#19d9cb}@media all and (max-width:800px){#provinceInfo{width:40%}}@media all and (max-width:750px){#provinceInfo{width:100%;position:static;background:0}

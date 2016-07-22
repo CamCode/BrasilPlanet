@@ -607,7 +607,7 @@ footer .item-map .icon img{
   font-size: 0.8em;
     margin: 5px 12px;
     display: block;
-    padding: 0px;
+    padding: 0px 5px;
   text-decoration: none;
 }
 #provinceInfo a:hover {
