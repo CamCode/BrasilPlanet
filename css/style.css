@@ -767,7 +767,7 @@ footer .item-map .icon img{
     width: 100%;
     box-shadow: 0px -6px 11px 0px rgba(0,0,0,0.2);
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: center;
     padding: 10px;
 }
@@ -1112,6 +1112,9 @@ footer .item-map .icon img{
 .condiciones-wrap .condiciones-info ul  li{
     margin: 2px;
 }
+.condiciones-wrap h2 .fa{
+        visibility: hidden;
+}
 
 /*Formularios informacion hoteles*/
 
@@ -1236,7 +1239,7 @@ footer .item-map .icon img{
 .table-wrap .table-info-row .img-table-info .img{
     position: relative;
     overflow: hidden;
-    height: 180px;
+    height: 12vw;
     width: 100%;
     margin: auto;
     border: 3px solid white;
@@ -1475,11 +1478,16 @@ footer .item-map .icon img{
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+ .day-mob{
+        display: none;
+    }
 
 
 
 @media only screen and (min-width: 900px) and (max-width: 1240px){
-
+    .condiciones-wrap h2 .fa{
+        visibility: hidden;
+    }
 
     section {
         width: 90%;
@@ -1548,6 +1556,9 @@ footer .item-map .icon img{
         font-size: 1em;
         text-align: left;
     }
+     .day-mob{
+        display: none;
+    }
 
 
 }
@@ -1555,6 +1566,9 @@ footer .item-map .icon img{
     section {
         width: 95%;
         margin: 10px auto;
+    }
+    .condiciones-wrap h2 .fa{
+       visibility: hidden;
     }
     .vitrina-principal {
         display: block;
@@ -1641,11 +1655,24 @@ footer .item-map .icon img{
         font-size: 1em;
         text-align: left;
     }
+     .day-mob{
+        display: none;
+    }
 
 
 }
 
 @media only screen and (min-width: 481px) and (max-width: 778px) {
+    h2 {
+        font-size: 2.2em;
+        color: #487FFA;
+        text-align: center;
+        margin: 0px;
+        font-family: 'Libre Baskerville', serif;
+    }
+    .condiciones-wrap h2 .fa{
+        visibility: hidden;
+}
    section {
         width: 100%;
         margin: 10px auto;
@@ -1850,9 +1877,10 @@ footer .item-map .icon img{
         font-size: 1em;
         text-align: left;
     }
+    
 
 }
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 500px) {
     h3 {
         font-size: 1em;
         color: #000;
@@ -1860,7 +1888,7 @@ footer .item-map .icon img{
         font-family: 'Libre Baskerville', serif;
     }
     h2 {
-        font-size: 2.3em;
+        font-size: 2.2em;
         color: #487FFA;
         text-align: center;
         margin: 0px;
@@ -1869,6 +1897,9 @@ footer .item-map .icon img{
     section {
         width: 100%;
         margin: 10px auto;
+    }
+    .slick-slider {
+        margin-bottom: 8px!important;
     }
     .vitrina-principal {
         display: block;
@@ -2161,5 +2192,134 @@ footer .item-map .icon img{
         font-weight: 600;
         margin: 2px;
     }
+    .hr1 {
+        height: 32px;
+    }
+/*pagina amazonia*/
+    .name-plan {
+        background-color: #487FFA;
+        width: 100%;
+        box-shadow: 0px -6px 11px 0px rgba(0,0,0,0.2);
+        color: #fff;
+        font-size: 1em;
+        text-align: center;
+        padding: 6px;
+    }
+    .icon-plan-wrap .icon-plan {
+        width: 26%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px;
+    }
+    .locations-wrap {
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+        padding: 2px;
+        text-align: center;
+    }
+    .nav-plan{
+        display: none;
+    }
+    .day-plan-left{
+        display: none;
+    }
+    .description-plan-wrap{
+        display: none;
+    }
+
+    /*dias mobile*/
+     .hr3{
+        height: 42px;
+      }
+    .table-wrap .table-info-wrap .button-coti-1{
+        top: 0px;
+        font-size: 12px;
+        z-index: 9999;
+        margin: 3px -48px;
+    }
+     .table-wrap .table-info-wrap .button-coti-2{
+        top: 0px;
+        font-size: 12px;
+        z-index: 9999;
+        margin: 3px -48px;
+    }
+    .day-plan-mob{
+        width: 100%;
+        display: block;
+    }
+    .day-plan-mob .day-txt{
+        color: #487FFA;
+        font-size: 1.2em;
+        text-align: center;
+        padding: 5px;
+        margin-bottom: 15px;
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid #999;
+        text-decoration: none;
+    }
+    .day-plan-mob .fa{
+        float: right;
+        margin: 5px;
+    }
+    .day-plan-mob .subday-mob{
+        display: block;
+        width: 95%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .day-plan-mob .subday-mob .day-images-wrap{
+        width: 100%;
+        display: block;
+        height: 51vw;
+        overflow: hidden;
+    }
+     .day-plan-mob .subday-mob .day-icons{
+        display: block;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+     }
+     .day-plan-mob .subday-mob .day-icons a{
+        display: inline-block;
+        width: 15%;
+        margin: 5px;
+     }
+     .day-plan-mob .subday-mob .day-info{
+        font-size: 12px;
+        line-height: 1.42;
+        padding: 8px;
+     }
+    /*condiciones*/
+    .condiciones-wrap h2{
+        font-size: 1.2em;
+         border-bottom: 1px solid #999;
+         display: block;
+         width: 100%;
+         padding: 5px;
+    }
+    .condiciones-wrap h2 .fa{
+        visibility: visible;
+        float: right;
+        margin: 5px;
+
+    }
+     .condiciones-wrap .day-icons{
+        display: none;
+     }
+      .condiciones-wrap .condiciones-info{
+        width: 95%;
+        margin: auto;
+        display: block;
+      }
+      .hr4{
+        height: 42px;
+      }
+      .condiciones-wrap .condiciones-info ul{
+        padding: 0px;
+        margin: 25px 0;
+        font-size: 12px;
+      }
 
 }

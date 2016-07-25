@@ -163,6 +163,49 @@ $(document).ready(function(){
         }
     });
 
+
+/*desplegables dias */
+$('.subday-mob').hide();
+
+$('.day-plan-mob .day-txt').click(function(e){
+    e.preventDefault();
+    var wrap_txt =  $(this).next();
+    var arrow_title = $(this).find('.fa');
+    //$('.subday-mob').slideUp();   
+    
+    $(arrow_title).toggleClass('fa-chevron-down fa-chevron-up');
+    $( wrap_txt ).slideToggle( "slow", function() { 
+
+    });   
+});
+ if($(window).width()<500) {
+
+    $('.condiciones-wrap .condiciones-info').hide();
+
+    $('.condiciones-wrap h2').click(function(e){
+        e.preventDefault();
+        var wrap_txt =  $(this).siblings('.condiciones-info');
+        var arrow_title = $(this).find('.fa');
+        //$('.subday-mob').slideUp();   
+        
+        $(arrow_title).toggleClass('fa-chevron-down fa-chevron-up');
+        $( wrap_txt ).slideToggle( "slow", function() { 
+
+        });   
+    });
+
+ }
+
+
+ /*if($('.day-plan-mob .day-txt .fa-chevron-up').length > 0){
+        $('.day-plan-mob .day-txt .fa').removeClass('fa-chevron-up');
+        $('.day-plan-mob .day-txt .fa').addClass('fa-chevron-down');     
+     }else{
+         $('.day-plan-mob .day-txt .fa').removeClass('fa-chevron-down');
+        $('.day-plan-mob .day-txt .fa').addClass('fa-chevron-up');  
+     }*/
+
+/*FIN desplegables dias */
     
 
     
