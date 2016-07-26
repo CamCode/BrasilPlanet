@@ -178,7 +178,8 @@ $('.day-plan-mob .day-txt').click(function(e){
 
     });   
 });
- if($(window).width()<500) {
+
+ if($(window).width()<489) {
 
     $('.condiciones-wrap .condiciones-info').hide();
 
@@ -192,6 +193,24 @@ $('.day-plan-mob .day-txt').click(function(e){
         $( wrap_txt ).slideToggle( "slow", function() { 
 
         });   
+    });
+
+    /*formulario 1*/
+    $('.form1-mob-wrap .hotel-wrap .hotel-info .more-info').hide();
+
+    $('.form1-mob-wrap .hotel-wrap .hotel-info .down-hotel').click(function(e){
+        e.preventDefault();
+        var wrap_txt =  $(this).parent();
+         wrap_txt = wrap_txt.parent();
+         wrap_txt = wrap_txt.siblings('.form1-mob-wrap .hotel-wrap .hotel-info .more-info');
+        //var arrow_title = $(this).find('.fa');
+        //$('.subday-mob').slideUp();   
+        
+        $(this).toggleClass('fa-chevron-down fa-chevron-up');
+        $( wrap_txt ).slideToggle( "slow", function() { 
+
+        });   
+        
     });
 
  }
