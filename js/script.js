@@ -181,6 +181,8 @@ $('.day-plan-mob .day-txt').click(function(e){
 
  if($(window).width()<489) {
 
+    $('.button-coti-2').removeClass('hide');
+
     $('.condiciones-wrap .condiciones-info').hide();
 
     $('.condiciones-wrap h2').click(function(e){
@@ -212,6 +214,29 @@ $('.day-plan-mob .day-txt').click(function(e){
         });   
         
     });
+
+    $(window).scroll(function () {
+        //aparece el boton 2 al llegar al formulario
+
+        if ($(window).scrollTop() > $('.day-mob').position().top) {
+
+            $('.button-coti-1').addClass('hide');
+            $('.button-coti-2').removeClass('hide');           
+        } else{    
+            $('.button-coti-2').addClass('hide');
+            $('.button-coti-1').removeClass('hide');    
+        } 
+        
+    
+    });
+
+     $('.button-coti-1').click(function(){
+        $('html, body').animate({
+            scrollTop: $(".table-wrap .table-selection").offset().top
+        }, 1000);
+     });
+
+
 
  }
 
