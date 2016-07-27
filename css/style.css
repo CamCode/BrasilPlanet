@@ -835,9 +835,11 @@ footer .item-map .icon img{
     float: left;
     margin-right: 10px;
     vertical-align: top;
-    -webkit-box-shadow: 12px 19px 48px -13px rgba(106,116,168,1);
-    -moz-box-shadow: 12px 19px 48px -13px rgba(106,116,168,1);
-    box-shadow: 12px 19px 48px -13px rgba(106,116,168,1);
+    /*box-shadow: 12px 19px 31px -17px rgba(106,116,168,1);*/
+    box-shadow: 12px 19px 35px -17px rgba(106,116,168,0.5);
+    -webkit-box-shadow: 12px 19px 35px -17px rgba(106,116,168,0.5);
+    -moz-box-shadow: 12px 19px 35px -17px rgba(106,116,168,0.5);
+   
 }
 .nav-plan .logos-plan{
     width: 98%;
@@ -1024,7 +1026,7 @@ footer .item-map .icon img{
 .day-plan-left .day-images-wrap{
     display: block;
     width: 100%;
-    height: 615px;
+    /*height: 615px;*/
     margin: 5px auto;
 }
 .day-plan-left .day-images-wrap img{
@@ -1038,7 +1040,7 @@ footer .item-map .icon img{
 .day-plan-left .day-images-wrap .img-xl{
     margin: 4px;
     width: 98%;
-    height: 39%;
+    height: 250px;
     overflow: hidden;
     display: block;
     background-repeat:no-repeat; 
@@ -1058,7 +1060,7 @@ footer .item-map .icon img{
     margin: 12px;
     display: inline-block;
     width: 46%;
-    height: 44%;
+    height: 265px;
     overflow: hidden;
     background-repeat:no-repeat; 
    background-size: 100% 100%;
@@ -1618,7 +1620,7 @@ footer .item-map .icon img{
     }
     .day-plan-left .day-images-wrap .img-s{
         width: 45%;
-        height: 42%;
+        height: 260px;
     }
 
 
