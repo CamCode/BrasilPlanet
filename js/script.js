@@ -106,9 +106,7 @@ $(document).ready(function(){
             scrollTop: $(".table-wrap").offset().top
         }, 1000);
      });
-    
-
-    
+       
 
       /*Menu para mobile*/
          $('.items_mob').hide();
@@ -120,23 +118,43 @@ $(document).ready(function(){
                 $('.items_mob').slideUp();
              });
 
-    /*pop up imagenes transporte*/
-    $("a.icon-transp").fancybox({
+    /*pop up imagenes dias*/
+    $(".icon-transp").fancybox({
         padding: 0,
 
                 openEffect : 'elastic',
-                openSpeed  : 500,
+                openSpeed  : 1000,
 
                 closeEffect : 'elastic',
-                closeSpeed  :500,
+                closeSpeed  :750,
+                maxWidth       : '80%',
+                maxHeight      : '80%',
 
-                //closeClick : true,
-                showCloseButton  : true,
-                fitToView: true 
-
-               
+                /*closeClick : true,*/
+                fitToView: true                
     }); 
+     $(".various").fancybox({
+      
+      padding: 0,
 
+        openEffect : 'elastic',
+        openSpeed  : 1000,
+
+        closeEffect : 'elastic',
+        closeSpeed  :750,
+
+        /*closeClick : true,*/
+        
+        maxWidth    : 300,
+        maxHeight   : 600,
+        fitToView   : false,
+        width       : '70%',
+        height      : '70%',
+
+        helpers : {
+         overlay : null
+        }
+      });
 
 
     /*galeria de imagenes hoteles destinos */
@@ -146,6 +164,8 @@ $(document).ready(function(){
         fitToView: true,
         width       : '40%',
         height      : '20%',
+        maxWidth       : '75%',
+        maxHeight      : '75%',
         autoSize    : false,
         helpers : {
             title   : {
