@@ -947,7 +947,13 @@ footer .item-map .icon img{
     font-size: 0.9em;
 }
 .day-plan-left .day-txt{
+    color:#9B4534;
     color: #487FFA;
+    font-size: 2em;
+    text-align: center;
+}
+.day-plan-left .day-txt-red{
+    color:#9B4534;
     font-size: 2em;
     text-align: center;
 }
@@ -1057,10 +1063,10 @@ footer .item-map .icon img{
 }
    
 .day-plan-left .day-images-wrap .img-s{
-    margin: 12px;
+    margin: 1px;
     display: inline-block;
-    width: 46%;
-    height: 252px;
+    width: 49%;
+    height: 242px;
     overflow: hidden;
     background-repeat:no-repeat; 
    background-size: 100% 100%;
@@ -3014,6 +3020,10 @@ footer .item-map .icon img{
         width: 100%;
         display: block;
     }
+    .form1-mob-wrap .hotel-wrap .hotel-info{
+        margin-bottom: 13px;
+    }
+        
     .form1-mob-wrap .hotel-wrap .mini-info{
         display: block;
         padding: 2px;
@@ -3030,7 +3040,7 @@ footer .item-map .icon img{
     }
      .form1-mob-wrap .hotel-wrap .mini-info .hotel-desc{
         display: inline-block;
-        width: 60%;
+        width: 65%;
         vertical-align: top;
         padding: 5px;
         box-sizing: border-box;
@@ -3040,6 +3050,7 @@ footer .item-map .icon img{
         font-size: 14px;
         color: #000;
         margin: 2px;
+        font-weight: 700;
      }
      .form1-mob-wrap .hotel-wrap .mini-info .hotel-desc .hotel-stars{
         width: 60%;
@@ -3086,13 +3097,38 @@ footer .item-map .icon img{
         overflow: hidden;
         display: block;
      }
-     .form1-mob-wrap .hotel-wrap .hotel-info .more-info p{
+     .form1-mob-wrap .hotel-wrap .hotel-info p{
         font-size: 12px;
         line-height: 1.42em;
         color: #000;
         text-align: left;
+        margin-bottom: 5px;
      }
-     .form1-mob-wrap .hotel-wrap .hotel-info .more-info .button-coti-2{
+     .form1-mob-wrap .button-coti-1-mob{
+        position: fixed;
+        top: 0px;
+        right: 5px;
+        z-index: 2000;
+        background: #0380FE;
+        background-image: -webkit-linear-gradient(top, #0380FE, #0a69c7);
+        background-image: -moz-linear-gradient(top, #0380FE, #0a69c7);
+        background-image: -ms-linear-gradient(top, #0380FE, #0a69c7);
+        background-image: -o-linear-gradient(top, #0380FE, #0a69c7);
+        background-image: linear-gradient(to bottom, #0380FE, #0a69c7);
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        font-family: 'Libre Baskerville', serif;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        width: 76px;
+        display: block!important;
+        cursor: pointer;
+     }
+     .form1-mob-wrap .button-coti-2{
         margin: 15px auto;
         z-index: 2000;
         background: #0380FE;

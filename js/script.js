@@ -67,9 +67,6 @@ $(document).ready(function(){
                 slidesToScroll: 1
               }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
           ]
         });
 
@@ -101,7 +98,7 @@ $(document).ready(function(){
 
    //al hacer click en el boton 1 baja hasta el formulario
 
-    $('.button-coti-1').click(function(){
+    $('.table-info-wrap .button-coti-1').click(function(){
         $('html, body').animate({
             scrollTop: $(".table-wrap").offset().top
         }, 1000);
@@ -130,7 +127,7 @@ $(document).ready(function(){
                 maxWidth       : '80%',
                 maxHeight      : '80%',
 
-                /*closeClick : true,*/
+                closeClick : true,
                 fitToView: true                
     }); 
      $(".various").fancybox({
@@ -143,13 +140,13 @@ $(document).ready(function(){
         closeEffect : 'elastic',
         closeSpeed  :750,
 
-        /*closeClick : true,*/
+        closeClick : true,
         
         maxWidth    : 300,
-        maxHeight   : 600,
+        maxHeight   : 300,
         fitToView   : false,
         width       : '70%',
-        height      : '70%',
+        height      : '40%',
 
         helpers : {
          overlay : null
@@ -199,7 +196,10 @@ $('.day-plan-mob .day-txt').click(function(e){
     });   
 });
 
+
  if($(window).width()<489) {
+
+
 
     $('.button-coti-2').removeClass('hide');
 
@@ -219,6 +219,8 @@ $('.day-plan-mob .day-txt').click(function(e){
 
     /*formulario 1*/
     $('.form1-mob-wrap .hotel-wrap .hotel-info .more-info').hide();
+    $('.form1-mob-wrap .table-selection').hide();
+    
 
     $('.form1-mob-wrap .hotel-wrap .hotel-info .down-hotel').click(function(e){
         e.preventDefault();
@@ -231,9 +233,18 @@ $('.day-plan-mob .day-txt').click(function(e){
         $(this).toggleClass('fa-chevron-down fa-chevron-up');
         $( wrap_txt ).slideToggle( "slow", function() { 
 
-        });   
+        });      
         
     });
+    $('.button-coti-1-mob').click(function(){  
+         console.log('cambiodatos');
+         $('.form1-mob-wrap .table-selection').show();          
+            $('html, body').animate({
+                scrollTop: $(".table-selection").offset().top
+            }, 1000);
+            
+         });
+        
 
     $(window).scroll(function () {
         //aparece el boton 2 al llegar al formulario
@@ -252,7 +263,7 @@ $('.day-plan-mob .day-txt').click(function(e){
 
      $('.button-coti-1').click(function(){
         $('html, body').animate({
-            scrollTop: $(".table-wrap .table-selection").offset().top
+            scrollTop: $(".table-selection").offset().top
         }, 1000);
      });
 
@@ -346,7 +357,7 @@ var brasilmap = document.getElementById("brasil-map");
         sourceImg = province.querySelector("img"),
         imgPath = "img/destinos/mapa/";
         provinceInfo.innerHTML = "";
-        provinceInfo.insertAdjacentHTML("afterbegin", "<a href='' id='close-btn'  onclick='cerrar()' style='display:block;background-image: url(css/fancybox_sprite.png);position: absolute ;top: -18px;right: -18px;    width: 36px;    height: 36px;   cursor: pointer;    z-index: 8040;'></a><img src="+imgPath + sourceImg.getAttribute('xlink:href')+" alt='"+sourceImg.getAttribute('alt')+"'><h1>"+provinceName+"</h1><ul>"+provincePara.innerHTML+"</ul></div class='img-clima'>"+provinceClima.innerHTML+"</div>");
+        provinceInfo.insertAdjacentHTML("afterbegin", "<a href='' id='close-btn'  onclick='cerrar()' style='display:block;background-image: url(http://brasilplanet.colombita.it/cami/css/fancybox_sprite.png);position: absolute ;top: -18px;right: -18px;    width: 36px;    height: 36px;   cursor: pointer;    z-index: 8040;'></a><img src="+imgPath + sourceImg.getAttribute('xlink:href')+" alt='"+sourceImg.getAttribute('alt')+"'><h1>"+provinceName+"</h1><ul>"+provincePara.innerHTML+"</ul></div class='img-clima'>"+provinceClima.innerHTML+"</div>");
         provinceInfo.classList.add("show");
         }
     });
