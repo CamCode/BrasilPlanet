@@ -1893,7 +1893,7 @@ footer .item-map .icon img{
     width: 100%;
     }
     .toggle-nav button {
-    margin-right: 0;
+    margin-left: 86%;
     width: 42px;
     height: 40px;
     border: none;
@@ -1919,7 +1919,7 @@ footer .item-map .icon img{
         position: absolute;
         background-color: rgba(255,255,255,1);
         top: 40px;
-        left: 0;
+        right: 0;
         z-index: 99;
         text-align: center;
     }
@@ -2193,7 +2193,7 @@ footer .item-map .icon img{
     width: 100%;
     }
     .toggle-nav button {
-    margin-right: 0;
+    margin-left: 87%;
     width: 42px;
     height: 40px;
     border: none;
@@ -2219,7 +2219,7 @@ footer .item-map .icon img{
         position: absolute;
         background-color: rgba(255,255,255,1);
         top: 40px;
-        left: 0;
+        right: 0;
         z-index: 99;
         text-align: center;
     }
@@ -2508,7 +2508,7 @@ footer .item-map .icon img{
     width: 100%;
     }
     .toggle-nav button {
-    margin-right: 0;
+    margin-left: 86%;
     width: 42px;
     height: 40px;
     border: none;
@@ -2534,7 +2534,7 @@ footer .item-map .icon img{
         position: absolute;
         background-color: rgba(255,255,255,1);
         top: 40px;
-        left: 0;
+        right: 0;
         z-index: 99;
         text-align: center;
     }
@@ -3132,9 +3132,10 @@ footer .item-map .icon img{
      }
      .form1-mob-wrap .button-coti-1-mob{
         position: fixed;
-        top: 2px;
-        right: 19px;
-        z-index: 2000;
+        top: 5px;
+        right: 40%;
+        left: 40%;
+        z-index: 10000;
         background: #0380FE;
         background-image: -webkit-linear-gradient(top, #0380FE, #0a69c7);
         background-image: -moz-linear-gradient(top, #0380FE, #0a69c7);
@@ -3148,11 +3149,29 @@ footer .item-map .icon img{
         color: #fff;
         font-size: 12px;
         text-align: center;
-        padding: 4px 8px 4px 8px;
+        padding: 5px 10px 5px 10px;
         text-decoration: none;
         width: 76px;
         display: block!important;
         cursor: pointer;
+     }
+     .form1-mob-wrap .fa-search{
+        position: fixed;
+        top: 10px;
+        left: 15%;
+        color: #0380FE;
+        font-weight: 700;
+        font-size: 16px;
+        z-index: 10000;
+     }
+     .form1-mob-wrap .fa-chevron-left{
+        position: fixed;
+        top: 10px;
+        left:5%;
+        color: #0380FE;
+        font-weight: 700;
+        font-size: 16px;
+        z-index: 10000;
      }
      .form1-mob-wrap .button-coti-2{
         margin: 15px auto;
