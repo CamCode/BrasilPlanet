@@ -941,9 +941,8 @@ footer .item-map .icon img{
 .day-plan-left{
     display: inline-block;
     vertical-align: top;
-    text-align: center;
     width: 75%;
-    text-align: justify;
+    text-align: center;
     font-size: 0.9em;
 }
 .day-plan-left .day-txt{
@@ -952,10 +951,8 @@ footer .item-map .icon img{
     font-size: 2em;
     text-align: center;
 }
-.day-plan-left .day-txt-red{
-    color:#9B4534;
-    font-size: 2em;
-    text-align: center;
+.day-txt-red{
+    color:#9B4534!important;
 }
 .day-plan-left .day-icons{
     display: inline-block;
@@ -1091,11 +1088,11 @@ footer .item-map .icon img{
     width: 20%;
     vertical-align: top;
 }
-.condiciones-wrap .day-icons img{
+/*.condiciones-wrap .day-icons img{
     width: 42%;
     display: block;
     margin: 27px auto;
-}
+}*/
 .condiciones-wrap{
     text-align: center;
 }
@@ -1106,20 +1103,34 @@ footer .item-map .icon img{
     vertical-align: top;
     font-family: 'Libre Baskerville', serif;
 }
-.condiciones-wrap .condiciones-info ul{
+.condiciones-wrap .condiciones-info .condiciones-item{
     display: block;
     margin: 30px 0px;
     font-size: 0.8em;
     list-style-type: none;
     color: #000;
 }
-.condiciones-wrap .condiciones-info ul .condiciones-title{
+.condiciones-wrap .condiciones-info .condiciones-item .condiciones-txt-wrap{
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+}
+.condiciones-wrap .condiciones-info .condiciones-item .condiciones-icon{
+    display: inline-block;
+    width: 10%;
+    vertical-align: middle;
+}
+.condiciones-wrap .condiciones-title{
     font-weight: 700;
     margin: 10px 0px;
+    font-size: 1.2em;
 }
-.condiciones-wrap .condiciones-info ul  li{
+.condiciones-wrap .condiciones-txt{
     margin: 2px;
+    font-size: 1em;
+    line-height: 19px;
 }
+
 .condiciones-wrap h2 .fa{
         visibility: hidden;
 }
@@ -2848,7 +2859,14 @@ footer .item-map .icon img{
       .hr4{
         height: 42px;
       }
-      .condiciones-wrap .condiciones-info ul{
+      .condiciones-wrap .condiciones-info .condiciones-item .condiciones-icon{
+        width: 19%;
+        display: inline-block;
+      }
+      .condiciones-wrap .condiciones-info .condiciones-item .condiciones-txt-wrap{
+        width: 70%;
+      }
+      .condiciones-wrap .condiciones-info .condiciones-txt-wrap{
         padding: 0px;
         margin: 25px 0;
         font-size: 12px;
@@ -3106,8 +3124,8 @@ footer .item-map .icon img{
      }
      .form1-mob-wrap .button-coti-1-mob{
         position: fixed;
-        top: 0px;
-        right: 5px;
+        top: 2px;
+        right: 19px;
         z-index: 2000;
         background: #0380FE;
         background-image: -webkit-linear-gradient(top, #0380FE, #0a69c7);
@@ -3122,7 +3140,7 @@ footer .item-map .icon img{
         color: #fff;
         font-size: 12px;
         text-align: center;
-        padding: 10px 20px 10px 20px;
+        padding: 4px 8px 4px 8px;
         text-decoration: none;
         width: 76px;
         display: block!important;
