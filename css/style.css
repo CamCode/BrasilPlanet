@@ -2414,13 +2414,13 @@ footer .item-map .icon img{
 }
 @media only screen and (min-width: 320px) and (max-width: 600px) {
     h3 {
-        font-size: 1em;
+        font-size: 0.8em;
         color: #000;
         text-align: center;
         font-family: 'Libre Baskerville', serif;
     }
     h2 {
-        font-size: 2.2em;
+        font-size: 2em;
         color: #487FFA;
         text-align: center;
         margin: 0px;
@@ -2668,16 +2668,24 @@ footer .item-map .icon img{
         width: 92%;
         margin: 10px auto;
     }
+    .icon_logo{
+    display: block;
+    width: 30vw;
+    margin: 10px auto;
+    }
+    .sub-icons-f{
+            display: none;
+        }
     .mapa-destinos{
         display: none;
     }
        .box-option-wrap {
-        width: 87vw;
+        width: 100vw;
         margin: 2px auto;
         text-align: center;
     }
     .box-option-wrap .box-option {
-        width: 92%;
+        width: 98%;
         margin: 5px;
         padding: 5px;
         overflow: hidden;
