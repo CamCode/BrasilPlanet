@@ -39,9 +39,7 @@ $(document).ready(function(){
     }
 
   
-   
-	 
-   
+    
 
     //slider 2 index.html
 
@@ -111,7 +109,7 @@ $(document).ready(function(){
     $('.table-info-wrap .button-coti-1').click(function(){
         $('html, body').animate({
             scrollTop: $(".table-wrap").offset().top
-        }, 1000);
+        }, 4000);
      });
        
 
@@ -119,7 +117,10 @@ $(document).ready(function(){
          $('.items_mob').hide();
             
               $('.toggle-nav button').click(function(){
-                $('.items_mob').slideDown();
+               // $('').slideDown();
+                $( '.items_mob').slideToggle( "slow", function() { 
+
+                    });   
              });
               $('.items').click(function(){
                 $('.items_mob').slideUp();
@@ -138,7 +139,15 @@ $(document).ready(function(){
                 maxHeight      : '80%',
 
                 closeClick : true,
-                fitToView: true                
+                fitToView: true,
+               helpers: {
+                    overlay : {
+                        closeClick : true,  // if true, fancyBox will be closed when user clicks on the overlay
+                        css : {
+                            'display' : 'block'
+                        }
+                    } 
+                }             
     }); 
      $(".various").fancybox({
       
@@ -153,10 +162,10 @@ $(document).ready(function(){
         closeClick : true,
         
         maxWidth    : 300,
-        maxHeight   : 300,
+        maxHeight   : 450,
         fitToView   : false,
         width       : '70%',
-        height      : '40%',
+        height      : '55%',
 
         helpers : {
          overlay : null
@@ -168,6 +177,11 @@ $(document).ready(function(){
     $(".fancybox-thumb").fancybox({
         prevEffect  : 'none',
         nextEffect  : 'none',
+         openEffect : 'elastic',
+        openSpeed  : 1000,
+
+        closeEffect : 'elastic',
+        closeSpeed  :750,
         fitToView: true,
         width       : '40%',
         height      : '20%',
@@ -246,12 +260,12 @@ $('.day-plan-mob .day-txt').click(function(e){
         });      
         
     });
-    $('.button-coti-1-mob').click(function(){  
+    $('.fa-search').click(function(){  
          console.log('cambiodatos');
          $('.form1-mob-wrap .table-selection').show();          
             $('html, body').animate({
                 scrollTop: $(".table-selection").offset().top
-            }, 1000);
+            }, 4000);
             
          });
         
@@ -274,7 +288,7 @@ $('.day-plan-mob .day-txt').click(function(e){
      $('.button-coti-1').click(function(){
         $('html, body').animate({
             scrollTop: $(".table-selection").offset().top
-        }, 1000);
+        }, 4000);
      });
 
 

@@ -47,7 +47,7 @@ h2{
     font-family: 'Libre Baskerville', serif;
 }
 h3{
-    font-size: 1.3em;
+    font-size: 1.4em;
     color: #000;
     text-align: center;
     font-family: 'Libre Baskerville', serif;
@@ -426,6 +426,9 @@ background: #9B4534;
     vertical-align: middle;
     width: 30%;
     margin-top: 5%;
+}
+.box-txt .icon-mob{
+    display: none;4
 }
 /*footer*/
 footer{
@@ -853,7 +856,7 @@ footer .item-map .icon img{
 }
 .nav-plan .plan-item{
     display: block;
-    margin: 10px auto;  
+    margin: 14px auto;  
     text-align: left;  
     color: #000;
     width: 90%;
@@ -1185,8 +1188,8 @@ footer .item-map .icon img{
   border: thin solid skyblue;
   border-radius: 4px;
   display: inline-block;
- line-height: 0.8em;
-  padding: 0.5em 3.5em 0.5em 1em;
+ line-height: 1.2em;
+  padding: 0.5em 3.5em 0.5em 2em;
 
   /* reset */    
   -webkit-box-sizing: border-box;
@@ -1291,7 +1294,7 @@ footer .item-map .icon img{
 .table-wrap .table-info-row .img-table-info .img{
     position: relative;
     overflow: hidden;
-    height: 12vw;
+    height: 13vw;
     width: 100%;
     margin: auto;
     border: 3px solid white;
@@ -1487,13 +1490,13 @@ footer .item-map .icon img{
     font-family: 'Libre Baskerville', serif;
 }
 .table-wrap .table-info-row2 .precios-table-info .hab{
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 600;    text-align: center;
     color: #000;
-    margin-top: 70px;
+    margin-top: 45px;
 }
 .table-wrap .table-info-row2 .precios-table-info .precio{
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: 600;
     text-align: center;
     color: #000;
@@ -1594,7 +1597,9 @@ footer .item-map .icon img{
         text-decoration: none;
         border: 3px solid #F0F1F1;
     }
-
+    .box-txt .icon-mob{
+        display: none;
+    }
     .box-option-wrap .box-option .type .txt {
         display: inline-block;
         text-align: right;
@@ -1707,6 +1712,9 @@ footer .item-map .icon img{
     vertical-align: middle;
     width: 62%;
     }
+    .box-txt .icon-mob{
+    display: none;
+}
     .mapa-destinos{
         display: none;
     }
@@ -2042,6 +2050,9 @@ footer .item-map .icon img{
         font-size: 1em;
         text-align: left;
     }
+    .box-txt .icon-mob{
+    display: none;
+}
     .day-mob{
         display: none;
     }
@@ -2178,6 +2189,15 @@ footer .item-map .icon img{
     width: 95%;
     text-align: center;
     vertical-align: top;
+    }
+    .box-txt .icon-mob {
+        display: inline-block;
+        vertical-align: middle;
+        width: 26%;
+        margin-top: 5%;
+    }
+    .box-txt .icon{
+        display: none;
     }
     nav{
         display: none;
@@ -2475,7 +2495,10 @@ footer .item-map .icon img{
     text-align: center;
     vertical-align: top;
     }
-    .box-txt .icon {
+    .box-txt .icon{
+        display: none;
+    }
+    .box-txt .icon-mob {
         display: inline-block;
         vertical-align: middle;
         width: 26%;
@@ -2953,6 +2976,7 @@ footer .item-map .icon img{
         display: block;
         width: 100%;
         text-align: center;
+        margin-bottom: 10px;
     }
     
     
@@ -3008,29 +3032,30 @@ footer .item-map .icon img{
     }
 
      .table-wrap-mob .table-subinfo .txt-subinfo{
-        width: 25%;
+        width: 30%;
         display: inline-block;
-        padding: 15px;
+        padding: 7px;
         box-sizing: border-box;
         color: #1FE4D2;
         font-weight: 700;
+        font-size: 12px;
         border-right: 1px solid #1FE4D2;
         text-align: right;
         vertical-align: middle;
     }
     .table-wrap-mob .table-subinfo .hab-subinfo{
-        width: 20%;
+        width: 32%;
         display: inline-block;
-        padding: 10px;
+        padding: 0px;
         box-sizing: border-box;
         color: #000;
         text-align: center;
         vertical-align: middle;
     }
      .table-wrap-mob .table-subinfo .total-subinfo{
-        width: 25%;
+        width: 31%;
         display: inline-block;
-        padding: 15px;
+        padding: 8px;
         box-sizing: border-box;
         color: #000;
         border-left: 1px solid #1FE4D2;
@@ -3129,6 +3154,8 @@ footer .item-map .icon img{
         color: #000;
         text-align: left;
         margin-bottom: 5px;
+        padding: 5px;
+        box-sizing:border-box;
      }
      .form1-mob-wrap .button-coti-1-mob{
         position: fixed;
