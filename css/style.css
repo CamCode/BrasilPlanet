@@ -860,6 +860,7 @@ footer .item-map .icon img{
     text-align: left;  
     color: #000;
     width: 90%;
+    /*font-size: 0.9em;*/
     box-shadow: 0px 0px 13px #487FFA;
     padding: 7px 3px;
 }
@@ -909,9 +910,12 @@ footer .item-map .icon img{
 .nav-plan .plan-item .plan-title-one:hover{
     background-color: #82E6D7;
 }
-.nav-plan .plan-item .plan-items .active_lat{
+.nav-plan .plan-item .active_lat{
     width: 100%;
     background-color: #82E6D7;  
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
 }
 
 
@@ -1046,7 +1050,7 @@ footer .item-map .icon img{
 .day-plan-left .day-images-wrap .img-xl{
     margin: 4px;
     width: 98%;
-    height: 230px;
+    height: 15vw;
     overflow: hidden;
     display: block;
     background-repeat:no-repeat; 
@@ -1066,7 +1070,7 @@ footer .item-map .icon img{
     margin: 1px;
     display: inline-block;
     width: 49%;
-    height: 242px;
+    height: 17vw;
     overflow: hidden;
     background-repeat:no-repeat; 
    background-size: 100% 100%;
@@ -1285,6 +1289,11 @@ footer .item-map .icon img{
     display: block;
     width: 100%;
 }
+.table-wrap .table-info-row .img-table-info .stars img{
+    display: inline-block;
+    width: 8%;
+    margin: 1px;
+}
 .table-wrap .table-info-row .img-table-info .place{
     font-size: 0.7em;
     text-align: left;
@@ -1310,6 +1319,7 @@ footer .item-map .icon img{
 }
 .table-wrap .table-info-row .img-table-info .img .hover-img{
     position: absolute;
+    text-decoration: none;
     bottom: 100%;
     left: 0px;
     width: 100%;
@@ -1333,6 +1343,10 @@ footer .item-map .icon img{
     padding: 15px;
     text-align: justify;
     font-size: 0.8em;
+}
+.table-wrap .table-info-row .txt-table-info b{
+    margin-bottom: 10px;
+    display: block;
 }
 .table-wrap .table-info-wrap .button-coti-1{
     position: fixed;
@@ -1418,7 +1432,7 @@ footer .item-map .icon img{
 }
 .table-wrap .table-info-row2 .img-table-info .name{
     font-weight: 700;
-    font-size: 0.8em;
+    font-size: 1.2em;
     text-align: left;
     display: block;
     width: 100%;
@@ -1428,8 +1442,13 @@ footer .item-map .icon img{
     display: block;
     width: 100%;
 }
+.table-wrap .table-info-row2 .img-table-info .stars img{
+    display: inline-block;
+    width: 6%;
+    margin: 1px;
+}
 .table-wrap .table-info-row2 .img-table-info .place{
-    font-size: 0.7em;
+    font-size: 0.8em;
     text-align: left;
     width: 100%;
     display: block;
@@ -1439,7 +1458,7 @@ footer .item-map .icon img{
 .table-wrap .table-info-row2 .img-table-info .img{
     position: relative;
     overflow: hidden;
-    height: 180px;
+    height: 13vw;
     width: 100%;
     margin: auto;
     border: 3px solid white;
@@ -1481,6 +1500,10 @@ footer .item-map .icon img{
     font-size: 0.8em;
     border-right: 1px solid #1FE4D2;
 }
+.table-wrap .table-info-row2 .txt-table-info b{
+    margin-bottom: 10px;
+    display: block;
+}
 .table-wrap .table-info-row2 .precios-table-info{
     display: table-cell;
     width: 33%;
@@ -1489,15 +1512,23 @@ footer .item-map .icon img{
     font-size: 0.8em;
     font-family: 'Libre Baskerville', serif;
 }
+.table-wrap .table-info-row2 .precios-table-info h3{
+    margin-bottom: 18px;
+}
 .table-wrap .table-info-row2 .precios-table-info .hab{
-    font-size: 1.2em;
-    font-weight: 600;    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;   
+    text-align: center;
     color: #000;
-    margin-top: 45px;
+    margin: 5px;
 }
 .table-wrap .table-info-row2 .precios-table-info .precio{
+    font-size: 1.2em;
+    text-align: center;
+    color: #000;
+}
+.table-wrap .table-info-row2 .precios-table-info .preciotot{
     font-size: 1em;
-    font-weight: 600;
     text-align: center;
     color: #000;
 }
@@ -1642,11 +1673,11 @@ footer .item-map .icon img{
     }
     .day-plan-left .day-images-wrap .img-s{
         width: 47%;
-         height: 239px;
+         height: 17vw;
          margin: 8px;
     }
     .day-plan-left .day-images-wrap .img-xl{
-         height: 225px;
+         height: 15vw;
          margin: 8px;
     }
 
@@ -2115,11 +2146,11 @@ footer .item-map .icon img{
     }
     .day-plan-left .day-images-wrap .img-s{
         width: 48%;
-       height: 158px;
+       height: 17vw;
        margin: 3px;
     }
     .day-plan-left .day-images-wrap .img-xl{
-        height: 155px;
+        height: 15vw;
     }
     
 
@@ -2424,11 +2455,11 @@ footer .item-map .icon img{
     }
     .day-plan-left .day-images-wrap .img-s{
         width: 47%;
-        height: 138px;
+        height: 17vw;
         margin: 3px;
     }
     .day-plan-left .day-images-wrap .img-xl{
-        height: 128px;
+        height: 15vw;
     }
 
 }
