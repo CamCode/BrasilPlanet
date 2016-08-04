@@ -2206,6 +2206,57 @@ footer .item-map .icon img{
     .day-plan-left .day-images-wrap .img-xl{
         height: 15vw;
     }
+     /*nosotros*/
+    .nosotros-wrap{
+        text-align: center;
+        margin-bottom: 6vw;
+    }
+    .nosotros-wrap .horario{
+        display: inline-block;
+        width: 80%;
+        vertical-align: middle;
+        text-align: left;
+        margin:5px auto;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #487FFA;
+    }
+    .nosotros-wrap .horario h2{
+        font-size: 1.5em;
+        color: #487FFA;
+        margin: 0px;
+        text-align: left;
+        font-family: 'Libre Baskerville', serif;
+    }
+    .nosotros-wrap .horario .hora{
+        font-size: 1em;
+        color: #999;
+    }
+    .nosotros-wrap .map{
+        display: block;
+        width: 80%;
+        vertical-align: middle;
+        margin: 5px auto;
+    }
+    .docus-wrap{
+        display: block;
+        margin:4vw auto;
+        text-align: center;
+    }
+    .docus-wrap h3{
+        color: #487FFA;
+        font-size: 1.6em;
+    }
+    .docus-wrap .txt-docu{
+        color: #000;
+        font-size: 1em;
+    }
+    .docus-wrap .txt-docu a{
+        text-decoration: none;
+        color: #000;
+    }
+    .docus-wrap .txt-docu a:hover{
+        font-weight: 600;
+    }
     
 
 }
@@ -2514,6 +2565,57 @@ footer .item-map .icon img{
     }
     .day-plan-left .day-images-wrap .img-xl{
         height: 15vw;
+    }
+     /*nosotros*/
+    .nosotros-wrap{
+        text-align: center;
+        margin-bottom: 6vw;
+    }
+    .nosotros-wrap .horario{
+        display: inline-block;
+        width: 80%;
+        vertical-align: middle;
+        text-align: left;
+        margin:5px auto;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #487FFA;
+    }
+    .nosotros-wrap .horario h2{
+        font-size: 1.5em;
+        color: #487FFA;
+        margin: 0px;
+        text-align: left;
+        font-family: 'Libre Baskerville', serif;
+    }
+    .nosotros-wrap .horario .hora{
+        font-size: 1em;
+        color: #999;
+    }
+    .nosotros-wrap .map{
+        display: block;
+        width: 80%;
+        vertical-align: middle;
+        margin: 5px auto;
+    }
+    .docus-wrap{
+        display: block;
+        margin:4vw auto;
+        text-align: center;
+    }
+    .docus-wrap h3{
+        color: #487FFA;
+        font-size: 1.6em;
+    }
+    .docus-wrap .txt-docu{
+        color: #000;
+        font-size: 1em;
+    }
+    .docus-wrap .txt-docu a{
+        text-decoration: none;
+        color: #000;
+    }
+    .docus-wrap .txt-docu a:hover{
+        font-weight: 600;
     }
 
 }
@@ -3307,6 +3409,63 @@ footer .item-map .icon img{
         display: block!important;
         cursor: pointer;
      }
+      /*nosotros*/
+    .nosotros-wrap{
+        text-align: center;
+        margin-bottom: 6vw;
+    }
+    .nosotros-wrap .horario{
+        display: inline-block;
+        width: 95%;
+        vertical-align: middle;
+        text-align: left;
+        margin:5px auto;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #487FFA;
+    }
+    .nosotros-wrap .horario h2{
+        font-size: 1em;
+        color: #487FFA;
+        margin: 0px;
+        text-align: left;
+        font-family: 'Libre Baskerville', serif;
+    }
+    .nosotros-wrap .horario .hora{
+        font-size: 1em;
+        color: #999;
+    }
+    .nosotros-wrap .map{
+        display: block;
+        width: 95%;
+        vertical-align: middle;
+        margin: 5px auto;
+    }
+    .nosotros-wrap .map iframe{
+        width: 100%;
+    }
+    .docus-wrap{
+        display: block;
+        margin:4vw auto;
+        text-align: center;
+        padding: 5px;
+    }
+    .docus-wrap h3{
+        color: #487FFA;
+        font-size: 1em;
+    }
+    .docus-wrap .txt-docu{
+        color: #000;
+        font-size: 0.8em;
+        line-height: 20px;
+        text-align: left;
+    }
+    .docus-wrap .txt-docu a{
+        text-decoration: underline;
+        color: #000;
+    }
+    .docus-wrap .txt-docu a:hover{
+        font-weight: 600;
+    }
 
 
 
