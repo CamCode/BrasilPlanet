@@ -402,6 +402,7 @@ background: #9B4534;
 .sec-right, .sec-left{
     display: block;
     width: 100%;
+    margin: -5px;
 }
 .box-txt, .box-img{
     display: inline-block;
@@ -412,6 +413,7 @@ background: #9B4534;
 .box-txt{
     padding: 5px;
     box-sizing:border-box;
+    margin: -3px;
 }
 .box-txt .txt{
     font-size:1em;
@@ -1567,6 +1569,57 @@ footer .item-map .icon img{
  .day-mob{
         display: none;
     }
+    /*nosotros*/
+    .nosotros-wrap{
+        text-align: center;
+        margin-bottom: 6vw;
+    }
+    .nosotros-wrap .horario{
+        display: inline-block;
+        width: 40%;
+        vertical-align: middle;
+        text-align: left;
+        margin:5px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #487FFA;
+    }
+    .nosotros-wrap .horario h2{
+        font-size: 1.8em;
+        color: #487FFA;
+        margin: 0px;
+        text-align: left;
+        font-family: 'Libre Baskerville', serif;
+    }
+    .nosotros-wrap .horario .hora{
+        font-size: 1.5em;
+        color: #999;
+    }
+    .nosotros-wrap .map{
+        display: inline-block;
+        width: 40%;
+        vertical-align: middle;
+        margin: 5px;
+    }
+    .docus-wrap{
+        display: block;
+        margin:4vw auto;
+        text-align: center;
+    }
+    .docus-wrap h3{
+        color: #487FFA;
+        font-size: 1.8em;
+    }
+    .docus-wrap .txt-docu{
+        color: #000;
+        font-size: 1.2em;
+    }
+    .docus-wrap .txt-docu a{
+        text-decoration: none;
+        color: #000;
+    }
+    .docus-wrap .txt-docu a:hover{
+        font-weight: 600;
+    }
 
 
 
@@ -1680,6 +1733,7 @@ footer .item-map .icon img{
          height: 15vw;
          margin: 8px;
     }
+
 
 
 
