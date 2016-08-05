@@ -1,4 +1,4 @@
-#fancybox-thumbs{position:fixed;width:50%;left:26%;right:50%;overflow:hidden;z-index:8050;text-align:center}#fancybox-thumbs.bottom{bottom:15%}#fancybox-thumbs.top{top:2px}
-#fancybox-thumbs ul{position:relative;list-style:none;margin:0;padding:0;left:0;right:45%;width:auto!important;left:27%!important}#fancybox-thumbs ul li{float:left;padding:1px;opacity:.8}
-#fancybox-thumbs ul li.active{opacity:.9;padding:0;border:1px solid #fff}#fancybox-thumbs ul li:hover{opacity:1}#fancybox-thumbs ul li a{display:block;position:relative;overflow:hidden;border:1px solid #1fe4d2;background:#111;outline:0}
-#fancybox-thumbs ul li img{display:block;position:relative;border:0;padding:0;max-width:none}
+#fancybox-thumbs{position:fixed;width:60%;left:18%;right:50%;overflow:hidden;z-index:8050;text-align:center}#fancybox-thumbs.bottom{bottom:15%}#fancybox-thumbs.top{top:2px}
+#fancybox-thumbs ul{position:relative;list-style:none;margin:0;left:0;right:0;width:auto!important;left:0!important}#fancybox-thumbs ul li{float:left;padding:1px;opacity:.8}
+#fancybox-thumbs ul li:first-child{visibility:hidden}#fancybox-thumbs ul li.active{opacity:.9;padding:0;border:1px solid #fff}#fancybox-thumbs ul li:hover{opacity:1}
+#fancybox-thumbs ul li a{display:block;position:relative;overflow:hidden;border:1px solid #1fe4d2;background:#111;outline:0}#fancybox-thumbs ul li img{display:block;position:relative;border:0;padding:0;max-width:none}

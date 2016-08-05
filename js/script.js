@@ -11,21 +11,26 @@ $(document).ready(function(){
         pauseOnHover:false,
         arrows:true,
         autoplaySpeed:7000,
-        responsive: [           
-            {
-              breakpoint: 600,
-              settings: {
-                dots: false,
-                arrows: false,
-                infinite: false,
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-          ]
+       responsive: [
+                {
+                  breakpoint: 630,
+                  settings: {
+                    arrows: false,
+                    autoplay: false,
+                    infinite:false,
+                    slidesToShow: 1
+                  }
+                },
+                {
+                  breakpoint: 380,
+                  settings: {
+                    arrows: false,
+                    autoplay: false,
+                    infinite:false,
+                    slidesToShow: 1
+                  }
+                }
+              ]
       });
 
     
@@ -108,9 +113,11 @@ $(document).ready(function(){
 
     $('.table-info-wrap .button-coti-1').click(function(){
         $('html, body').animate({
-            scrollTop: $(".table-wrap").offset().top
+            scrollTop: $(".form-wrap").offset().top - 100
         }, 4000);
      });
+
+    //$('html, body').animate({scrollTop: $('#contact').offset().top -100 }, 'slow');
        
 
       /*Menu para mobile*/
@@ -193,8 +200,8 @@ $(document).ready(function(){
                 type: 'outside'
             },
            thumbs  : {
-                width   : 50,
-                height  : 50
+                width   : 130,
+                height  : 130
             },
            overlay : {
                 css : {
