@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Brasil Planet</title>
+		<!--estilos-->
+		<link rel="stylesheet" type="text/css" href="css/normalize.min.css">	
+		<!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+		<!--Carousel
+		<link rel="stylesheet" type="text/css" href="css/slick/slick.css">
+		<link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css">-->
+
+		<!-- bxSlider Javascript file -->
+		<script src="/js/jquery.bxslider.min.js"></script>
+		<!-- bxSlider CSS file -->
+		<link href="/css/jquery.bxslider.css" rel="stylesheet" />
+		<!--iconos fuente
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">-->
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<!-- Add fancyBox main JS and CSS files -->
+		
+		<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+		<!-- Optionally add helpers - button, thumbnail and/or media -->
+		<link rel="stylesheet" href="css/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		@font-face {
+		    font-family: 'Selfie-black';
+		    src: url('../fonts/Selfie-Black.eot');
+		    src: url('../fonts/Selfie-Black.eot?#iefix') format('embedded-opentype'),
+		        url('../fonts/Selfie-Black.woff') format('woff'),
+		        url('../fonts/Selfie-Black.ttf') format('truetype'),
+		        url('../fonts/Selfie-Black.svg#Selfie-Black') format('svg');
+		    font-weight: 900;
+		    font-style: normal;
+		}
+		@font-face {
+		    font-family: 'Selfie';
+		    src: url('../fonts/Selfie.eot');
+		    src: url('../fonts/Selfie.eot?#iefix') format('embedded-opentype'),
+		        url('../fonts/Selfie.woff') format('woff'),
+		        url('../fonts/Selfie.ttf') format('truetype'),
+		        url('../fonts/Selfie.svg#Selfie') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'prataregular';
+		    src: url('../fonts/prata-regular-webfont.eot');
+		    src: url('../fonts/prata-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('../fonts/prata-regular-webfont.woff2') format('woff2'),
+		         url('../fonts/prata-regular-webfont.woff') format('woff'),
+		         url('../fonts/prata-regular-webfont.ttf') format('truetype'),
+		         url('../fonts/prata-regular-webfont.svg#prataregular') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+		img {
+		    width: 100%;
+		}
+		body {
+		    width: 100%;
+		    margin: auto;
+		    font-family: 'Libre Baskerville', serif;
+		}
+		h2{
+		    font-size: 3em;
+		    color: #487FFA;
+		    text-align: center;
+		    margin: 0px;
+		    font-family: 'Libre Baskerville', serif;
+		}
+		h3{
+		    font-size: 1.4em;
+		    color: #000;
+		    text-align: center;
+		    font-family: 'Libre Baskerville', serif;
+		}
+		h4{
+		    font-size: 1em;
+		    color: #000;
+		    text-align: center;
+		}
+		section{
+		    width: 80%;
+		    margin: 10px auto;
+		}
+		b{
+		    margin-bottom: 5px;
+		}
+			/*Formularios informacion hoteles*/
+
+			.table-wrap{
+			    display: block;
+			    width: 85%;
+			    margin: 5px auto;
+			}
+			.table-wrap .table-title{
+			    display: block;
+			    width: 100%;
+			    padding: 5px;
+			    margin: auto;
+			    text-align: center;
+			    font-size: 1.5em;
+			    font-weight: 700;
+			    border-bottom: 1px solid #1FE4D2;
+			}
+			.table-wrap .table-selection{
+			    display:block;
+			    width: 100%;
+			    padding: 15px;
+			    text-align: center;
+			}
+			.table-wrap .table-selection .item-selection{
+			    display: inline-block;
+			    width: 17%;
+			    margin: 2px auto;
+			    text-align: center;
+			    padding: 20px;
+			}
+			.table-wrap .table-selection .item-selection label{
+			    font-size: 0.9em;
+			    font-weight: 700;
+			    color: #000;
+			    display: block;
+			}
+			.table-wrap .table-selection .item-selection select{
+			    display: block;
+			    margin: 4px auto;
+			    width: 100%;
+			    font-size: 0.8em;
+			    padding:2px;
+			    border: 1px solid #666;
+			    background-color: white;
+
+			     /* styling */
+			  background-color: white;
+			  border: thin solid skyblue;
+			  border-radius: 4px;
+			  display: inline-block;
+			 line-height: 1.2em;
+			  padding: 0.5em 3.5em 0.5em 2em;
+
+			  /* reset */    
+			  -webkit-box-sizing: border-box;
+			  -moz-box-sizing: border-box;
+			  box-sizing: border-box;
+			  -webkit-appearance: none;
+			  -moz-appearance: none;
+
+			    background-image:
+			    linear-gradient(45deg, transparent 50%, white 50%),
+			    linear-gradient(135deg, white 50%, transparent 50%),
+			    linear-gradient(to right, skyblue, skyblue);
+			  background-position:
+			    calc(100% - 20px) calc(1em + 2px),
+			    calc(100% - 15px) calc(1em + 2px),
+			    100% 0;
+			  background-size:
+			    5px 5px,
+			    5px 5px,
+			    2.5em 2.5em;
+			  background-repeat: no-repeat;
+
+			}
+			.table-wrap .table-selection .item-selection select:after{
+			    background-color: #1FE4D2;
+			    color: #fff;
+			    font-weight: 700;
+			}
+			.table-wrap .table-subt{
+			    font-size: 0.9em;
+			    text-align: center;
+			    padding: 5px;
+			    border-top: 1px solid #1FE4D2;
+			    border-bottom: 1px solid #1FE4D2; 
+			    width: 100%;  
+			    font-weight: 700; 
+			}
+			.table-wrap .table-subinfo{
+			    font-size: 0.7em;
+			    display: block;
+			    width: 100%;
+			    text-align: center;
+			}
+
+			.table-wrap .table-subinfo .txt-subinfo{
+			    width: 25%;
+			    display: inline-block;
+			    padding: 15px;
+			    color: #1FE4D2;
+			    font-weight: 700;
+			    border-right: 1px solid #1FE4D2;
+			    text-align: right;
+			    vertical-align: middle;
+			}
+			.table-wrap .table-subinfo .hab-subinfo{
+			    width: 20%;
+			    display: inline-block;
+			    padding: 10px;
+			    color: #000;
+			    text-align: center;
+			    vertical-align: middle;
+			}
+			.table-wrap .table-subinfo .total-subinfo{
+			    width: 25%;
+			    display: inline-block;
+			    padding: 15px;
+			    color: #000;
+			    border-left: 1px solid #1FE4D2;
+			    text-align: left;
+			    vertical-align: middle;
+			}
+
+			.table-wrap .table-info-row{
+			    display: table;
+			    width: 100%;
+			    border-bottom: 1px solid #1FE4D2;
+			}
+			.table-wrap .table-info-row .img-table-info{
+			    display: table-cell;
+			    width: 35%;
+			    padding: 15px;
+			    border-right: 1px solid #1FE4D2;
+			}
+			.table-wrap .table-info-row .img-table-info .name{
+			    font-weight: 700;
+			    font-size: 0.8em;
+			    text-align: left;
+			    display: block;
+			    width: 100%;
+			}
+			.table-wrap .table-info-row .img-table-info .stars{
+			    text-align: left;
+			    display: block;
+			    width: 100%;
+			}
+			.table-wrap .table-info-row .img-table-info .stars img{
+			    display: inline-block;
+			    width: 6%;
+			    margin: 1px;
+			}
+			.table-wrap .table-info-row .img-table-info .place{
+			    font-size: 0.7em;
+			    text-align: left;
+			    width: 100%;
+			    display: block;
+			}
+			.table-wrap .table-info-row .img-table-info .img{
+			    position: relative;
+			    overflow: hidden;
+			    height: 13vw;
+			    width: 100%;
+			    margin: auto;
+			    border: 3px solid white;
+			     -webkit-transition: 0.5s ease-in-out;
+			    transition: 0.5s ease-in-out;
+			}
+			.table-wrap .table-info-row .img-table-info .img:hover{
+			    border: 3px solid #1fe4d2;
+			}
+			.table-wrap .table-info-row .img-table-info .img img{
+			    width: 100%;
+			    height: 100%;
+			}
+			.table-wrap .table-info-row .img-table-info .img .hover-img{
+			    position: absolute;
+			    text-decoration: none;
+			    bottom: 100%;
+			    left: 0px;
+			    width: 100%;
+			    height: 100%;
+			    display: block;
+			    background-color: rgba(0,0,0,0.7);
+			    color: #fff;
+			    font-size: 1em;
+			    text-align: center;
+			    line-height: 163px;
+			    font-weight: 700;
+			    -webkit-transition: 0.5s ease-in-out;
+			    transition: 0.5s ease-in-out;
+			}
+			.table-wrap .table-info-row .img-table-info .img:hover .hover-img{
+			    bottom: 0px;
+			}
+			.table-wrap .table-info-row .txt-table-info{
+			    display: table-cell;
+			    width: 70%;
+			    padding: 15px;
+			    text-align: justify;
+			    font-size: 0.8em;
+			}
+			.table-wrap .table-info-row .txt-table-info b{
+			    margin-bottom: 10px;
+			    display: block;
+			}
+			.table-wrap .table-info-wrap .button-coti-1{
+			    position: fixed;
+			    right: 16px;
+			    top: 60px;
+			    z-index: 2000;
+			    background: #0380FE;
+			    background-image: -webkit-linear-gradient(top, #0380FE, #0a69c7);
+			    background-image: -moz-linear-gradient(top, #0380FE, #0a69c7);
+			    background-image: -ms-linear-gradient(top, #0380FE, #0a69c7);
+			    background-image: -o-linear-gradient(top, #0380FE, #0a69c7);
+			    background-image: linear-gradient(to bottom, #0380FE, #0a69c7);
+			    -webkit-border-radius: 28;
+			    -moz-border-radius: 28;
+			    border-radius: 28px;
+			    font-family: 'Libre Baskerville', serif;
+			    color: #ffffff;
+			    font-size: 14px;
+			    text-align: center;
+			    padding: 10px 20px 10px 20px;
+			    text-decoration: none;
+			    width: 76px;
+			    margin: 30px auto;
+			    display: block;
+			    cursor: pointer;
+			}
+
+			.table-wrap .table-info-wrap .button-coti-1:hover {
+			  background: #3cb0fd;
+			  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+			  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+			  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+			  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+			  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+			  text-decoration: none;
+			}
+			.table-wrap .table-info-wrap .button-coti-2{
+			    position: fixed;
+			    left: 84%;
+			    top: 90px;
+			    z-index: 2000;
+			    background: #0380FE;
+			    background-image: -webkit-linear-gradient(top, #0380FE, #0a69c7);
+			    background-image: -moz-linear-gradient(top, #0380FE, #0a69c7);
+			    background-image: -ms-linear-gradient(top, #0380FE, #0a69c7);
+			    background-image: -o-linear-gradient(top, #0380FE, #0a69c7);
+			    background-image: linear-gradient(to bottom, #0380FE, #0a69c7);
+			    -webkit-border-radius: 28;
+			    -moz-border-radius: 28;
+			    border-radius: 28px;
+			    font-family: 'Libre Baskerville', serif;
+			    color: #ffffff;
+			    font-size: 14px;
+			    text-align: center;
+			    padding: 10px 20px 10px 20px;
+			    text-decoration: none;
+			    width: 76px;
+			    margin: 30px auto;
+			    display: block;
+			    cursor: pointer;
+			}
+
+			.table-wrap .table-info-wrap .button-coti-2:hover {
+			  background: #3cb0fd;
+			  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+			  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+			  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+			  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+			  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+			  text-decoration: none;
+			}
+
+
+
+		</style>
+	</head>
+	<body>
+		
+		<!--formulario hoteles-->
+		<section>
+			<h3>Formulario1</h3>
+
+			<div class="table-wrap">
+				<div class="table-title">Lencois maranhenses, Delta y Jericoacoara</div>
+				<div class="table-selection">
+					<div class="item-selection">
+						<label>Período de viaje</label>
+						<select name="carlist">
+						  <option value="volvo">Volvo</option>
+						  <option value="saab">Saab</option>
+						  <option value="opel">Opel</option>
+						  <option value="audi">Audi</option>
+						</select>
+					</div>
+					<div class="item-selection">
+						<label>Cuantas personas</label>
+						<select name="carlist">
+						  <option value="volvo">Volvo</option>
+						  <option value="saab">Saab</option>
+						  <option value="opel">Opel</option>
+						  <option value="audi">Audi</option>
+						</select>
+					</div>
+					<div class="item-selection">
+						<label>Categoría Hotel</label>
+						<select name="carlist">
+						  <option value="volvo">Volvo</option>
+						  <option value="saab">Saab</option>
+						  <option value="opel">Opel</option>
+						  <option value="audi">Audi</option>
+						</select>
+					</div>
+					<div class="item-selection">
+						<label>Moneda</label>
+						<select name="carlist">
+						  <option value="volvo">Volvo</option>
+						  <option value="saab">Saab</option>
+						  <option value="opel">Opel</option>
+						  <option value="audi">Audi</option>
+						</select>
+					</div>
+					
+				</div>
+				<div class="table-subt">Categoría Standard</div>
+				<div class="table-subinfo">
+					<div class="txt-subinfo">Precios por persona:</div>
+					<div class="hab-subinfo">Habitación doble $ 700,000</div>
+					<div class="total-subinfo">Total de viaje $ 17600,00</div>
+				</div>
+				<div class="table-subt">Hoteles y posadas incluidos en el programa:</div>
+				<div class="table-info-wrap">
+				<!--Boton cotizar que sale desde la parte de arriba-->
+					<div class="button-coti-1">Cotiza tu viaje</div>
+
+					<!--boton cotizar que sale al lado del formulario-->
+						<div class="button-coti-2">Cotiza tu viaje</div>
+					<!--Informacion e imagen hotel-->
+					<div class="table-info-row">
+
+					
+						<!--imagen nombre hotel y puntuación-->
+						<div class="img-table-info">
+							<div class="name">Pousada do Buriti</div>
+							<div class="stars">
+								<img src="img/destinos/plan/star-full.png" alt="">
+								<img src="img/destinos/plan/star-full.png" alt="">
+								<img src="img/destinos/plan/star-full.png" alt="">
+							</div>
+							<div class="place">Sao Luis</div>
+
+						<!--galeria imagenes hoteles -->
+							<div class="img">
+								<a class="hover-img fancybox-thumb" rel="fancybox-thumb01" href="http://brasilplanet.colombita.it/img_prod/hotel/zoom/2989930.jpg" title="Amazon Village Jungle Lodge">
+							         Ver más 
+							    </a>
+								<!--Primera imagen la unica que se ve sin hacer click  el rel cambia de numero en cada hotel rel="fancybox-thumb01"-->
+								<a class="fancybox-thumb" rel="fancybox-thumb01" href="img/principal/slide/pag_in_2.jpg" title="Pousada do Buriti">
+									<img src="img/principal/slide/pag_in_2.jpg" alt="">		
+								</a>
+						   <!--estas solo se ven al abrir el pop up-->
+								<a class="fancybox-thumb" rel="fancybox-thumb01" href="img/destinos/plan/day/dia1-1.png" title="Pousada do Buriti">
+									<img src="img/destinos/mapa/amazonia.png" alt="">		
+								</a>
+								<a class="fancybox-thumb" rel="fancybox-thumb01" href="img/principal/slide/pag_in_2.jpg" title="Pousada do Buriti">
+									<img src="img/principal/slide/pag_in_2.jpg" alt="">		
+								</a>
+								<a class="fancybox-thumb" rel="fancybox-thumb01" href="img/destinos/plan/day/dia1-1.png" title="Pousada do Buriti">
+									<img src="img/destinos/mapa/amazonia.png" alt="">		
+								</a>
+								
+							</div>
+						<!--FIN galeria imagenes hoteles -->
+						</div>
+						<!--información hotel-->
+						<div class="txt-table-info">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec lacinia tellus. Morbi molestie eros mollis, vulputate nisl eget, luctus libero. Nulla malesuada volutpat blandit. Pellentesque quis augue rutrum, dignissim mi in, fringilla ipsum. Ut tortor libero, fermentum eget imperdiet vitae, ornare at ex. Ut eget odio id diam auctor tempus et in leo. Donec metus lacus, condimentum non augue in, volutpat volutpat nibh. Curabitur eget diam ultrices augue interdum pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo ligula lacus, quis tempus erat volutpat sit amet.
+							</p>
+						</div>
+					</div>
+
+					<!--Informacion e imagen hotel-->
+					<div class="table-info-row">
+						<!--imagen nombre hotel y puntuación-->
+						<div class="img-table-info">
+							<div class="name">Pousada do Buriti</div>
+							<div class="stars">
+								<img src="img/destinos/plan/star-full.png" alt="">
+								<img src="img/destinos/plan/star-mid.png" alt="">
+								<img src="img/destinos/plan/star-empty.png" alt="">
+							</div>
+							<div class="place">Sao Luis</div>
+							
+							<!--galeria imagenes hoteles -->
+							<div class="img">
+								<a class="hover-img fancybox-thumb" rel="fancybox-thumb02" href="http://brasilplanet.colombita.it/img_prod/hotel/zoom/2989930.jpg" title="Amazon Village Jungle Lodge">
+							         Ver más 
+							    </a>
+								<!--Primera imagen la unica que se ve sin hacer click el rel cambia de numero en cada hotel rel="fancybox-thumb02"-->
+								<a class="fancybox-thumb" rel="fancybox-thumb02" href="img/destinos/mapa/amazonia.png" title="Pousada do Buriti">
+									<img src="img/destinos/mapa/amazonia.png" alt="">		
+								</a>
+						   	<!--estas solo se ven al abrir el pop up-->
+								<a class="fancybox-thumb" rel="fancybox-thumb02" href="img/destinos/plan/day/dia1-1.png" title="Pousada do Buriti">
+									<img src="img/destinos/mapa/amazonia.png" alt="">		
+								</a>
+								<a class="fancybox-thumb" rel="fancybox-thumb02" href="img/principal/slide/pag_in_2.jpg" title="Pousada do Buriti">
+									<img src="img/destinos/mapa/amazonia.png" alt="">		
+								</a>
+								<a class="fancybox-thumb" rel="fancybox-thumb02" href="img/destinos/plan/day/dia1-1.png" title="Pousada do Buriti">
+									<img src="img/destinos/mapa/amazonia.png" alt="">		
+								</a>								
+							</div>
+							<!--FIN galeria imagenes hoteles -->
+							
+						</div>
+						<!--información hotel-->
+						<div class="txt-table-info">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec lacinia tellus. Morbi molestie eros mollis, vulputate nisl eget, luctus libero. Nulla malesuada volutpat blandit. Pellentesque quis augue rutrum, dignissim mi in, fringilla ipsum. Ut tortor libero, fermentum eget imperdiet vitae, ornare at ex. Ut eget odio id diam auctor tempus et in leo. Donec metus lacus, condimentum non augue in, volutpat volutpat nibh. Curabitur eget diam ultrices augue interdum pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo ligula lacus, quis tempus erat volutpat sit amet.
+							</p>
+						</div>
+					</div>
+
+
+					<!--Informacion e imagen hotel-->
+					<div class="table-info-row">
+						<!--imagen nombre hotel y puntuación-->
+						<div class="img-table-info">
+							<div class="name">Pousada do Buriti</div>
+							<div class="stars">
+								<img src="img/destinos/plan/star-full.png" alt="">
+								<img src="img/destinos/plan/star-full.png" alt="">
+								<img src="img/destinos/plan/star-empty.png" alt="">
+							</div>
+							<div class="place">Sao Luis</div>
+							
+						<!--galeria imagenes hoteles -->
+							<div class="img">
+								<a class="hover-img fancybox-thumb" rel="fancybox-thumb03" href="http://brasilplanet.colombita.it/img_prod/hotel/zoom/2989930.jpg" title="Amazon Village Jungle Lodge">
+							         Ver más 
+							    </a>
+								<!--Primera imagen la unica que se ve sin hacer click  el rel cambia de numero en cada hotel rel="fancybox-thumb03"-->
+								<a class="fancybox-thumb" rel="fancybox-thumb03" href="img/principal/slide/pag_in_2.jpg" title="Pousada do Buriti">
+									<img src="img/principal/slide/pag_in_2.jpg" alt="">		
+								</a>
+						   <!--estas solo se ven al abrir el pop up-->
+								<a class="fancybox-thumb" rel="fancybox-thumb03" href="img/destinos/plan/day/dia1-1.png" title="Pousada do Buriti">
+									<img src="img/destinos/mapa/amazonia.png" alt="">		
+								</a>
+								<a class="fancybox-thumb" rel="fancybox-thumb03" href="img/principal/slide/pag_in_2.jpg" title="Pousada do Buriti">
+									<img src="img/principal/slide/pag_in_2.jpg" alt="">		
+								</a>
+								<a class="fancybox-thumb" rel="fancybox-thumb03" href="img/destinos/plan/day/dia1-1.png" title="Pousada do Buriti">
+									<img src="img/destinos/mapa/amazonia.png" alt="">		
+								</a>
+								
+							</div>
+						<!--FIN galeria imagenes hoteles -->
+							
+						</div>
+						<!--información hotel-->
+						<div class="txt-table-info">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec lacinia tellus. Morbi molestie eros mollis, vulputate nisl eget, luctus libero. Nulla malesuada volutpat blandit. Pellentesque quis augue rutrum, dignissim mi in, fringilla ipsum. Ut tortor libero, fermentum eget imperdiet vitae, ornare at ex. Ut eget odio id diam auctor tempus et in leo. Donec metus lacus, condimentum non augue in, volutpat volutpat nibh. Curabitur eget diam ultrices augue interdum pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo ligula lacus, quis tempus erat volutpat sit amet.
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		
+	
+		
+		
+		
+		
+	</body>
+
+	<!--jquery-->
+
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script src="js/script.js"></script>   
+	<script type="text/javascript" src="js/jquery.fancybox.js"></script> 
+	<script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
+
+</html>

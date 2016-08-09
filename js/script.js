@@ -145,7 +145,6 @@ $(document).ready(function(){
                 maxWidth       : '80%',
                 maxHeight      : '80%',
 
-                closeClick : true,
                 fitToView: true,
                helpers: {
                     overlay : {
@@ -154,8 +153,20 @@ $(document).ready(function(){
                             'display' : 'block'
                         }
                     } 
-                }             
+                }
+                        
     }); 
+    /* $('body').click(function(){
+       $.fancybox.close();
+    });*/
+$('.various').click(function(){
+    if($('.fancybox-iframe').length > 0) {
+       $('body').click(function(){
+           $.fancybox.close();
+        });
+    }
+});
+    
      $(".various").fancybox({
       
       padding: 0,
@@ -174,9 +185,9 @@ $(document).ready(function(){
         width       : '70%',
         height      : '55%',
 
-        helpers : {
+       /* helpers : {
          overlay : null
-        }
+        }*/
       });
 
 
@@ -192,8 +203,8 @@ $(document).ready(function(){
         fitToView: true,
         width       : '40%',
         height      : '20%',
-        maxWidth       : '75%',
-        maxHeight      : '75%',
+        maxWidth       : '80%',
+        maxHeight      : '85%',
         autoSize    : false,
         helpers : {
             title   : {
@@ -223,6 +234,28 @@ $('.day-plan-mob .day-txt').click(function(e){
     
     $(arrow_title).toggleClass('fa-chevron-down fa-chevron-up');
     $( wrap_txt ).slideToggle( "slow", function() { 
+
+    });   
+});
+
+/*referencias desplegable*/
+$('.ref-txt-wrap').hide();
+
+$('.ref-coment').click(function(e){
+    e.preventDefault();
+    
+    var wrap_ref =  $(this).next();
+    //wrap_ref= wrap_ref.next();
+    var wrap_ref =  $(this).parent();
+         wrap_ref = wrap_ref.parent();
+         wrap_ref = wrap_ref.siblings('.ref-txt-wrap');
+    console.log(wrap_ref);
+    $(this).find('.fa').toggleClass('fa-chevron-down fa-chevron-up');
+    //var arrow_title = $(this).find('.fa');
+    //$('.subday-mob').slideUp();   
+    
+    //$(arrow_title).toggleClass('fa-chevron-down fa-chevron-up');
+    $( wrap_ref ).slideToggle( "slow", function() { 
 
     });   
 });
@@ -372,6 +405,8 @@ scaleVideoContainer();
 });*/
 
 
+       
+
 var brasilmap = document.getElementById("brasil-map");
     provinceInfo = document.getElementById("provinceInfo");
     allProvinces = document.querySelectorAll(".zone_map");
@@ -388,76 +423,30 @@ var brasilmap = document.getElementById("brasil-map");
         sourceImg = province.querySelector("img"),
         imgPath = "img/destinos/mapa/";
         provinceInfo.innerHTML = "";
-        provinceInfo.insertAdjacentHTML("afterbegin", "<a href='' id='close-btn'  onclick='cerrar()' style='display:block;background-image: url(http://brasilplanet.colombita.it/cami/css/fancybox_sprite.png);position: absolute ;top: -18px;right: -18px;    width: 36px;    height: 36px;   cursor: pointer;    z-index: 8040;'></a><img src="+imgPath + sourceImg.getAttribute('xlink:href')+" alt='"+sourceImg.getAttribute('alt')+"'><h1>"+provinceName+"</h1><ul>"+provincePara.innerHTML+"</ul></div class='img-clima'>"+provinceClima.innerHTML+"</div>");
+        provinceInfo.insertAdjacentHTML("afterbegin", "<a href='#' id='close-btn' style='display:block;background-image: url(http://brasilplanet.colombita.it/cami/css/fancybox_sprite.png);position: absolute ;top: -18px;right: -18px;    width: 36px;    height: 36px;   cursor: pointer;    z-index: 8040;'></a><img src="+imgPath + sourceImg.getAttribute('xlink:href')+" alt='"+sourceImg.getAttribute('alt')+"'><h1>"+provinceName+"</h1><ul>"+provincePara.innerHTML+"</ul></div class='img-clima'>"+provinceClima.innerHTML+"</div>");
         provinceInfo.classList.add("show");
+
+        $('#close-btn').click(function(e){
+            console.log('cerrar box');
+            e.preventDefault();
+            $('#provinceInfo').removeClass('show');
+         });
+
         }
-    });
-
-            function cerrar(){
-                document.querySelectorAll(".show").style.opacity = '0';
-            }
-
-/*$('#close-btn').click(function(){
-    $('#provinceInfo.show').css('opacity','0');
-});
-
-
-    $(".zone_map").click(function() {
-        var items = document.getElementsByClassName('.zone_map');
-        for (var i = 0; i < items.length; i++){
-
-            var img_name = items[i].attr('data-path');
-            items[i].attr('fill',img_name);
-            //console.log(items[i].attr('data-path'));
-        }
-           
-    });
-
-    $('.zone_map').click(function(){
-        var img_2 = $(this).attr('fill');
-        var img_gray = $(this).attr('data-path');
-
-        var zone = $('.zone_map');
-
-
-        console.log(img_gray);
-        console.log(img_2);
-
-        var zone_arr = [];
-
-        for(var i=0; i< zone.length; i++){
-            zone_arr.push(zone[i].attr('data-path'));
-
-            var img_g = zone[i].attr('data-path');
-           
-            //zone[i].attr('fill',img_g);
-
+        
+        
+        /*
+        function click_cerrar(){
+            document.body.onclick = provinceInfo.style.visibility='hidden' ;
+            return cerrar();
         }*/
-
-    
-
-       
-
-   
-
-    /*function data_map(){
-        var map_arr = [];
-        $('.zone_map').each(function(){
-            var img_g = $(this).attr('data-path');
-        });
-    }
+        
+    });
   
-    $('body').click(function(e){
-        provinceInfo.classList.remove("show");
-         for (var i=0; i < allProvinces.length; i++) {
-            allProvinces[i].classList.remove("active");
-        }
-    });*/
-
-
- 
+            
 
 });
+
 /*function f_click_zone(id_zone){
            
     var img_id = document.getElementById(id_zone).getAttribute('fill');
@@ -471,9 +460,7 @@ function map_gray(){
 }*/
 
 
- 
-
-document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+     document.getElementById('myVideo').addEventListener('ended',myHandler,false);
 function myHandler(e) {
     $('.vitrina-principal').slick('slickPlay');
 }
@@ -526,4 +513,6 @@ function scaleBannerVideoSize(element){
     });
 
   }
+
+
 
