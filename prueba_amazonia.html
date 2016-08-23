@@ -8,7 +8,7 @@
         <meta name="keywords" content="AMAZÔNIA AMAZÔNIA Amazônia 3 dias e 2 noitesBrasilplanet" />
 		<meta name="Description" content="qui ci mettiamo il perch&egrave; fare questo viaggio" />
         <link rel="shortcut icon" type="image/png" href="http://brasilplanet.colombita.it/imgbra/favicon.png" />
-		<!--estilos-->
+		<script type="text/Javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script><!--estilos-->
 		<link rel="stylesheet" type="text/css" href="http://brasilplanet.colombita.it/cami/css/normalize.min.css">	
 		<link rel="stylesheet" type="text/css" href="http://brasilplanet.colombita.it/cami/css/style.css">
 		<!--Carousel-->
@@ -19,6 +19,7 @@
 		<link href="http://brasilplanet.colombita.it/cami/css/font-awesome.min.css" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         
+        
         <!-- Add fancyBox main JS and CSS files -->
 		
 		<link rel="stylesheet" type="text/css" href="http://brasilplanet.colombita.it/cami/css/jquery.fancybox.css" media="screen" />
@@ -28,6 +29,97 @@
 
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#slt_periodo").change(function(){
+  
+    var idper = $("#slt_periodo").val();
+	var idarea = $("#hd_idarea").val();
+	var idcat = $("#hd_idcat").val();
+	var idit = $("#hd_idit").val();
+   
+    $.ajax({
+      type: "POST",
+      url: "http://brasilplanet.colombita.it/msg_periodo2jquery.asp",
+      data: "idit=" + idit + "&idarea=" + idarea + "&idcat=" + idcat + "&idper=" + idper ,
+      dataType: "html",
+      success: function(msg)
+      {
+        $("#comopz2").html(msg);
+      },
+      error: function()
+      {
+        alert("Chiamata fallita, si prega di riprovare...");
+      }
+    });
+	
+	$.ajax({
+      type: "POST",
+      url: "http://brasilplanet.colombita.it/calcolo_personejqueryit2.asp",
+      data: "idit=" + idit + "&idarea=" + idarea + "&idcat=" + idcat + "&idper=" + idper ,
+      dataType: "html",
+      success: function(msg)
+      {
+        $("#comopz31").html(msg);
+      },
+      error: function()
+      {
+        alert("Chiamata fallita, si prega di riprovare...");
+      }
+    });
+	
+	$.ajax({
+      type: "POST",
+      url: "http://brasilplanet.colombita.it/calcolo_elenco_hotelnewjquery.asp",
+      data: "idit=" + idit + "&idarea=" + idarea + "&idcat=" + idcat + "&idper=" + idper  ,
+      dataType: "html",
+      success: function(msg)
+      {
+        $("#comopz4").html(msg);
+      },
+      error: function()
+      {
+        alert("Chiamata fallita, si prega di riprovare...");
+      }
+    });
+	
+	$.ajax({
+      type: "POST",
+      url: "http://brasilplanet.colombita.it/calcolo_elenco_hotel_itinerario_testjquery.asp",
+      data: "idit=" + idit + "&idarea=" + idarea + "&idcat=" + idcat + "&idper=" + idper   ,
+      dataType: "html",
+      success: function(msg)
+      {
+        $("#comopz41").html(msg);
+      },
+      error: function()
+      {
+        alert("Chiamata fallita, si prega di riprovare...");
+      }
+    });
+	
+  });
+ }); 
+  
+$(document).ready(function() {
+$("a.immadest").fancybox({
+		'zoomSpeedIn': 1000,
+		'zoomSpeedOut':1000,
+		'overlayShow': false,
+		'easingIn':'easeOutBack',
+		'easingOut':'easeInBack',
+		'zoomOpacity':true
+	}); 
+});
+$(window).load(function() {
+        $('#slider').nivoSlider();
+		$('#slider2').nivoSlider();
+    });
+
+function goToByScroll(id){
+     			$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+		}
+</script>
 	</head>
 	<body>
 		<header>			
@@ -70,7 +162,7 @@
 					<a href="http://brasilplanet.colombita.it/default.asp" class="item" id="it-1"><!--<i class="fa fa-home "></i>--> Home </a>
 					<a href="http://brasilplanet.colombita.it/destinos.asp" class="item" id="it-2"><!--<i class="fa fa-map-marker "></i> -->Destinos</a>
 					<a href="" class="item" id="it-3"><!--<i class="fa fa-comments-o "></i>--> Referencias</a>
-					<a href="" class="item"  style="background-image:url(http://brasilplanet.colombita.it/cami/img/logo.png); background-size: 86%; background-position:50%; background-repeat:no-repeat;"></a>
+					<a href="" class="item"  style="background-image:url(http://brasilplanet.colombita.it/cami/img/logo.png); background-size: 70%; background-position:50%; background-repeat:no-repeat;"></a>
 					<a href="" class="item" id="it-5"><!--<i class="fa fa-building-o "></i>--> Nosotros</a>
 					<a href="" class="item" id="it-6"><!--<i class="fa fa-gavel"></i>--> Condiciones <br>Generales</a>
 
@@ -218,10 +310,12 @@
 		<!--Destinos cajitas-->
 		   <div class="locations-wrap">
            <h3 style="color: #487FFA;">Localidades visitadas</h3>
-			
-                    	<a href="" class="location">Rio Negro</a>
-                    
-                    	<a href="" class="location">Rio Solimoes</a>
+           
+        <a href="" class="location">Rio Negro</a>
+        
+        <a href="" class="location">Rio Solimoes</a>
+        
+                   	<!--<a href="" class="location"></a>-->
                     	   		
   		   </div>
 		  <!--FIN Destinos cajitas-->
@@ -396,6 +490,7 @@
 			</div>
 			<!--FIN Mapa lateral-->
 <!--Descripcion destino-->
+<h1>Amazônia -  3 dias e 2 noites</h1>
 
 <div class="description-plan-wrap">
 				<!--Descripcion días Introducción-->
@@ -428,27 +523,36 @@
 				<div class="day-plan-left ">
 					<hr class="hr3">
                     
-            <div class="day-txt">
-						Dia 1<br>Manaus
-				  </div>
+                    <div class="day-txt">
+						Roteiro e Duração 
+					</div>
                     
 					<!--Descripcion DIA Iconos transporte-->
                     
-						<div class="day-icons">
-						 
-									<!--Icono transporte pop up --> 
-									<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=2" class="various" id="various" data-fancybox-type="iframe" >
-										<!--Icono transporte-->
-										<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-05.png" alt="Totoya Bandeirante 4x4" class="icon">
-									</a>
-									  
-									<!--Icono transporte pop up --> 
-									<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=3" class="various" id="various" data-fancybox-type="iframe" >
-										<!--Icono transporte-->
-										<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-03.png" alt="Totoya Hilux 4x4" class="icon">
-									</a>
-									 	 
-					</div>
+					<div class="day-info">
+						<!--Titulo Dia-->
+						<!--<div class="day-title">  - </div>-->
+						<!--Descripcion dia-->
+												
+					
+					<!--Imagenes Descripción dia-->
+                    
+					
+				</div>
+                
+                
+				
+				<!--FIN Descripcion DIA Iconos izquierda-->
+                </div>
+                
+                
+				<!--Descripcion DIA Iconos izquierda-->
+				<div class="day-plan-left ">
+					<hr class="hr3">
+                    
+            <div class="day-txt">
+						Dia 1<br>Manaus
+				  </div>
                     
 					<div class="day-info">
 						<!--Titulo Dia-->
@@ -462,7 +566,7 @@
                         
                         
 							<!--Imagen grande a lo ancho -->
-							<a href="http://brasilplanet.colombita.it/img_prod/manaus_rionegro.jpg" class="icon-transp" rel="Manaus63"><div class="img-xl" style="background-image:url(http://brasilplanet.colombita.it/img_prod/manaus_rionegro.jpg);">
+							<a href="http://brasilplanet.colombita.it/img_prod/Katerre109.jpg" class="icon-transp" rel="Manaus63"><div class="img-xl" style="background-image:url(http://brasilplanet.colombita.it/img_prod_thumb/manaus_rionegro.jpg);">
 								<!--pop up galeria de imagenes
 								<a class="fancybox-thumb" rel="fancybox-thumb" href="img/destinos/plan/day/dia1-1.png" title="Dpia 1 destino 1">		
 								<img src="img/principal/slide/pag_in_2.jpg" alt="">							
@@ -474,73 +578,24 @@
 					
 				</div>
                 
-				
-				<!--FIN Descripcion DIA Iconos izquierda-->
-                </div>
-                
-                
-				<!--Descripcion DIA Iconos izquierda-->
-				<div class="day-plan-left ">
-					<hr class="hr3">
-                    
-            <div class="day-txt">
-						Dia 2<br>Manaus
-				  </div>
-                    
-					<div class="day-info">
-						<!--Titulo Dia-->
-						<!--<div class="day-title">  - </div>-->
-						<!--Descripcion dia-->
-						<p>Sa&iacute;da pela manh&atilde; para caminhar pelas trilhas em meio &agrave; floresta, acompanhados de experiente guia local, sempre com novas e agrad&aacute;veis surpresas. Ap&oacute;s o almo&ccedil;o sa&iacute;mos para visita &agrave;s casas dos nativos e passeio em canoa motorizada, atrav&eacute;s da qual vamos cortando os igarap&eacute;s e igap&oacute;s - canais estreitos, alagadi&ccedil;os, somente percorridos em pequenos barcos como os nossos, (no per&iacute;odo de vazante, visita a casa do caboclo). Jantar servido no hotel ( inclu&iacute;do ) e pernoite. Pernoite em hotel de Selva com caf&eacute; da manh&atilde;.</p>						
-					
-					<!--Imagenes Descripción dia-->
-                    
-						<div class="day-images-wrap">
-                        
-                        
-							<!--Imagen grande a lo ancho -->
-							<a href="http://brasilplanet.colombita.it/img_prod/amazonia-micos921313888.jpg" class="icon-transp" rel="Manaus64"><div class="img-s" style="background-image:url(http://brasilplanet.colombita.it/img_prod/amazonia-micos921313888.jpg);">
-								<!--pop up galeria de imagenes
-								<a class="fancybox-thumb" rel="fancybox-thumb" href="img/destinos/plan/day/dia1-1.png" title="Dpia 1 destino 1">		
-								<img src="img/principal/slide/pag_in_2.jpg" alt="">							
-								</a>-->
-							</div></a>
-                        
-							<!--Imagen grande a lo ancho -->
-							<a href="http://brasilplanet.colombita.it/img_prod/amazonia-iguana20931720.jpg" class="icon-transp" rel="Manaus64"><div class="img-s" style="background-image:url(http://brasilplanet.colombita.it/img_prod/amazonia-iguana20931720.jpg);">
-								<!--pop up galeria de imagenes
-								<a class="fancybox-thumb" rel="fancybox-thumb" href="img/destinos/plan/day/dia1-1.png" title="Dpia 1 destino 1">		
-								<img src="img/principal/slide/pag_in_2.jpg" alt="">							
-								</a>-->
-							</div></a>
-                        
-							<!--Imagen grande a lo ancho -->
-							<a href="http://brasilplanet.colombita.it/img_prod/manaus_rio.jpg" class="icon-transp" rel="Manaus64"><div class="img-xl" style="background-image:url(http://brasilplanet.colombita.it/img_prod/manaus_rio.jpg);">
-								<!--pop up galeria de imagenes
-								<a class="fancybox-thumb" rel="fancybox-thumb" href="img/destinos/plan/day/dia1-1.png" title="Dpia 1 destino 1">		
-								<img src="img/principal/slide/pag_in_2.jpg" alt="">							
-								</a>-->
-							</div></a>
-                        
-					</div>	
-                    
-					
-				</div>
                 
 					<!--Descripcion DIA Iconos transporte-->
                     
+                    <!--iconos transporte-->
 						<div class="day-icons">
-						 
+                        
+		 
 									<!--Icono transporte pop up --> 
-									<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=2" class="various" id="various" data-fancybox-type="iframe"  >
+									<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=7" class="various" id="various" data-fancybox-type="iframe" >
 										<!--Icono transporte-->
-										<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-05.png" alt="Totoya Bandeirante 4x4" class="icon">
+										<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-09.png" alt="Carro Pequeno" class="icon">
 									</a>
-									  
+									 
+		 
 									<!--Icono transporte pop up --> 
-									<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=3" class="various" id="various" data-fancybox-type="iframe"  >
+									<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=8" class="various" id="various" data-fancybox-type="iframe" >
 										<!--Icono transporte-->
-										<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-03.png" alt="Totoya Hilux 4x4" class="icon">
+										<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-04.png" alt="Lancha Voadeira" class="icon">
 									</a>
 									 	 
 					</div>
@@ -555,10 +610,76 @@
 					<hr class="hr3">
                     
             <div class="day-txt">
-						Dia 3<br>Manaus
+						Dia 2<br>Manaus
 				  </div>
                     
 					<!--Descripcion DIA Iconos transporte-->
+                    
+                    <!--iconos transporte-->
+						<div class="day-icons">
+                        
+		 
+									<!--Icono transporte pop up --> 
+									<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=8" class="various" id="various" data-fancybox-type="iframe" >
+										<!--Icono transporte-->
+										<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-04.png" alt="Lancha Voadeira" class="icon">
+									</a>
+									 	 
+					</div>
+                    
+					<div class="day-info">
+						<!--Titulo Dia-->
+						<!--<div class="day-title">  - </div>-->
+						<!--Descripcion dia-->
+						<p>Sa&iacute;da pela manh&atilde; para caminhar pelas trilhas em meio &agrave; floresta, acompanhados de experiente guia local, sempre com novas e agrad&aacute;veis surpresas. Ap&oacute;s o almo&ccedil;o sa&iacute;mos para visita &agrave;s casas dos nativos e passeio em canoa motorizada, atrav&eacute;s da qual vamos cortando os igarap&eacute;s e igap&oacute;s - canais estreitos, alagadi&ccedil;os, somente percorridos em pequenos barcos como os nossos, (no per&iacute;odo de vazante, visita a casa do caboclo). Jantar servido no hotel ( inclu&iacute;do ) e pernoite. Pernoite em hotel de Selva com caf&eacute; da manh&atilde;.</p>						
+					
+					<!--Imagenes Descripción dia-->
+                    
+						<div class="day-images-wrap">
+                        
+                        
+							<!--Imagen grande a lo ancho -->
+							<a href="http://brasilplanet.colombita.it/img_prod/amazonia-micos921313888.jpg" class="icon-transp" rel="Manaus64"><div class="img-s" style="background-image:url(http://brasilplanet.colombita.it/img_prod_thumb/amazonia-micos224519450.jpg);">
+								<!--pop up galeria de imagenes
+								<a class="fancybox-thumb" rel="fancybox-thumb" href="img/destinos/plan/day/dia1-1.png" title="Dpia 1 destino 1">		
+								<img src="img/principal/slide/pag_in_2.jpg" alt="">							
+								</a>-->
+							</div></a>
+                        
+							<!--Imagen grande a lo ancho -->
+							<a href="http://brasilplanet.colombita.it/img_prod/amazonia-iguana20931720.jpg" class="icon-transp" rel="Manaus64"><div class="img-s" style="background-image:url(http://brasilplanet.colombita.it/img_prod_thumb/amazonia-iguana512416283.jpg);">
+								<!--pop up galeria de imagenes
+								<a class="fancybox-thumb" rel="fancybox-thumb" href="img/destinos/plan/day/dia1-1.png" title="Dpia 1 destino 1">		
+								<img src="img/principal/slide/pag_in_2.jpg" alt="">							
+								</a>-->
+							</div></a>
+                        
+							<!--Imagen grande a lo ancho -->
+							<a href="http://brasilplanet.colombita.it/img_prod/manaus_rio.jpg" class="icon-transp" rel="Manaus64"><div class="img-xl" style="background-image:url(http://brasilplanet.colombita.it/img_prod_thumb/manaus_rio.jpg);">
+								<!--pop up galeria de imagenes
+								<a class="fancybox-thumb" rel="fancybox-thumb" href="img/destinos/plan/day/dia1-1.png" title="Dpia 1 destino 1">		
+								<img src="img/principal/slide/pag_in_2.jpg" alt="">							
+								</a>-->
+							</div></a>
+                        
+					</div>	
+                    
+					
+				</div>
+                
+                
+				
+				<!--FIN Descripcion DIA Iconos izquierda-->
+                </div>
+                
+                
+				<!--Descripcion DIA Iconos izquierda-->
+				<div class="day-plan-left ">
+					<hr class="hr3">
+                    
+            <div class="day-txt">
+						Dia 3<br>Manaus
+				  </div>
                     
 					<div class="day-info">
 						<!--Titulo Dia-->
@@ -571,42 +692,48 @@
 					
 				</div>
                 
+                
+					<!--Descripcion DIA Iconos transporte-->
+                    
 				
 				<!--FIN Descripcion DIA Iconos izquierda-->
                 </div>
                 
                 
 				<!--Descripcion DIA Iconos izquierda-->
-				<div class="condiciones-wrap">
-				<hr class="hr4">
-				<h2 class="tit-cond">Saida <i class="fa fa-chevron-down" aria-hidden="true"></i></h2>
-					<!--<div class="day-icons">
-						
-						<img src="img/destinos/plan/condiciones/c_2.png" alt="" class="icon">
-						<img src="img/destinos/plan/condiciones/c_3.png" alt="" class="icon">
-						<img src="img/destinos/plan/condiciones/c_4.png" alt="" class="icon">
-					</div>-->
-					<div class="condiciones-info">
-					  	<div class="condiciones-item">
-					  		<div class="condiciones-icon">
-								<img src="http://brasilplanet.colombita.it//imgbra/ico/iconosalida.png" alt="holacaminew" class="icon-saida" style=" width: 82%;" data-pin-nopin="true">
-							</div>
-							<div class="condiciones-txt-wrap">
-								<div class="condiciones-title">
-									
-
-								</div>	
-								<div class="condiciones-txt">
-									Diariamente
-								</div>
-							</div>
-								
-					  	</div>			
-						
-						
+				<div class="day-plan-left ">
+					<hr class="hr3">
+                    
+                    <div class="day-txt">
+						Saída
 					</div>
+                    
+                    
+                     <div class="day-icons">
+       <img src="http://brasilplanet.colombita.it//imgbra/ico/iconosalida.png" alt="holacaminew" class="icon-saida">
+     </div>
+     
+<!--      <div class="day-info">
+      <p></p>      
+     </div>
+-->                    
+					<!--Descripcion DIA Iconos transporte-->
+                    
+					<div class="day-info">
+						<!--Titulo Dia-->
+						<!--<div class="day-title">  - </div>-->
+						<!--Descripcion dia-->
+						<ul><li>Diariamente.</li></ul>						
+					
+					<!--Imagenes Descripción dia-->
+                    
 					
 				</div>
+                
+                
+				
+				<!--FIN Descripcion DIA Iconos izquierda-->
+                </div>
                 
                 
     </section>
@@ -625,10 +752,37 @@
                     <!--contenedor parte desplegable-->
 					<div class="subday-mob">
                     
+                      
+                 
+					
+					<!--Descripcion DIA Iconos transporte-->
+                    
                     
 						<div class="day-info">
 							<div class="day-title">Época para visitação</div>
 							<p>A melhor &eacute;poca para visita&ccedil;&atilde;o ao Parque Nacional da Amaz&ocirc;nia &eacute; entre os meses de julho e dezembro, quando as chuvas diminuem. A Amaz&ocirc;nia tem o clima quente e &uacute;mido, com temperaturas anuais variando entre 21&ordm;C e 42&ordm;. A temperatura m&eacute;dia anual &eacute; de 28&ordm;C. Caracteriza-se por umidade elevada durante todo o ano; as chuvas s&atilde;o muito abundantes (entre 3500 e 6000 mm/ano) e, em certos per&iacute;odos, provocam enchentes inundando vastas regi&otilde;es.</p>						
+						</div>	
+			  </div>				
+					
+                <!--dia mobile-->
+			<div class="day-plan-mob">
+					<!--titulo click-->
+                  
+					<a href="#" class="day-txt">
+						Roteiro e Duração <i class="fa fa-chevron-down" aria-hidden="true"></i>
+					</a>
+                    <!--contenedor parte desplegable-->
+					<div class="subday-mob">
+                    
+                      
+                 
+					
+					<!--Descripcion DIA Iconos transporte-->
+                    
+                    
+						<div class="day-info">
+							<div class="day-title">Roteiro e Duração </div>
+													
 						</div>	
 			  </div>				
 					
@@ -646,23 +800,32 @@
 						<div class="day-images-wrap">
                         	
 						<!--Imagenes mitad del ancho-->						
-								<img src="http://brasilplanet.colombita.it/img_prod/manaus_rionegro.jpg" alt="">								
+								<img src="http://brasilplanet.colombita.it/img_prod/Katerre109.jpg" alt="">								
 							
 						</div>
                       
-						<!--iconos transporte-->
+                      
+                 
+					
+					<!--Descripcion DIA Iconos transporte-->
+                    
+                    <!--iconos transporte-->
 						<div class="day-icons">
-                         
-							<!--Icono transporte pop up -->
-							<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=2" class="various  ">
-								<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-05.png" alt="" class="icon">
-							</a>
-                          
-							<!--Icono transporte pop up -->
-							<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=3" class="various  ">
-								<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-03.png" alt="" class="icon">
-							</a>
-                         	 
+                        
+		 
+									<!--Icono transporte pop up --> 
+									<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=7" class="various" id="various" data-fancybox-type="iframe" >
+										<!--Icono transporte-->
+										<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-09.png" alt="Carro Pequeno" class="icon">
+									</a>
+									 
+		 
+									<!--Icono transporte pop up --> 
+									<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=8" class="various" id="various" data-fancybox-type="iframe" >
+										<!--Icono transporte-->
+										<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-04.png" alt="Lancha Voadeira" class="icon">
+									</a>
+									 	 
 					</div>
                     
                     
@@ -696,19 +859,21 @@
 							
 						</div>
                       
-						<!--iconos transporte-->
+                      
+                 
+					
+					<!--Descripcion DIA Iconos transporte-->
+                    
+                    <!--iconos transporte-->
 						<div class="day-icons">
-                         
-							<!--Icono transporte pop up -->
-							<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=2" class="various  ">
-								<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-05.png" alt="" class="icon">
-							</a>
-                          
-							<!--Icono transporte pop up -->
-							<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=3" class="various  ">
-								<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-03.png" alt="" class="icon">
-							</a>
-                         	 
+                        
+		 
+									<!--Icono transporte pop up --> 
+									<a href="http://brasilplanet.colombita.it/mezzo.asp?idmezzo=8" class="various" id="various" data-fancybox-type="iframe" >
+										<!--Icono transporte-->
+										<img src="http://brasilplanet.colombita.it/img_auto_brasil/iconos transporte-04.png" alt="Lancha Voadeira" class="icon">
+									</a>
+									 	 
 					</div>
                     
                     
@@ -728,6 +893,11 @@
                     <!--contenedor parte desplegable-->
 					<div class="subday-mob">
                     
+                      
+                 
+					
+					<!--Descripcion DIA Iconos transporte-->
+                    
                     
 						<div class="day-info">
 							<div class="day-title"> - Manaus</div>
@@ -745,10 +915,15 @@
                     <!--contenedor parte desplegable-->
 					<div class="subday-mob">
                     
+                      
+                 
+					
+					<!--Descripcion DIA Iconos transporte-->
+                    
                     
 						<div class="day-info">
 							<div class="day-title">Saída</div>
-							<p>Diariamente</p>						
+							<ul><li>Diariamente.</li></ul>						
 						</div>	
 			  </div>				
 					
@@ -849,69 +1024,69 @@
         <div class="table-wrap">
         <div class="table-title">Amazônia - 3 dias e 2 noites</div>
         <div class="table-selection">
-        <div class="item-selection">
-        <label>Epoca da sua viagem</label>
-        <input name="hd_idarea" id="hd_idarea" type="hidden" value="31" /><input name="hd_idcat" id="hd_idcat" type="hidden" value="16" /><input name="hd_idit" id="hd_idit"  type="hidden" value="4" />
-        
-                    <!--<div id="comopz1">-->
-                    <select name="slt_periodo" id="slt_periodo" >
-                    <option  value="0">Epoca da sua viagem</option>
-                    
-                        <option  value="32"  selected >Julho 2016</option>
-                    
-                        <option  value="17" >Agosto 2016</option>
-                    
-                        <option  value="18" >Setembro 2016</option>
-                    
-                        <option  value="20" >Outubro 2016</option>
-                    
-                        <option  value="5" >Novembro 2016</option>
-                    
-                        <option  value="22" >Dezembro 2016</option>
-                    
-                    </select>
-          </div>
+	        <div class="item-selection">
+	        <label>Epoca da sua viagem</label>
+	        <input name="hd_idarea" id="hd_idarea" type="hidden" value="31" /><input name="hd_idcat" id="hd_idcat" type="hidden" value="16" /><input name="hd_idit" id="hd_idit"  type="hidden" value="4" />
+	        
+	                    <div id="comopz1">
+	                    <select name="slt_periodo" id="slt_periodo" >
+	                    <option  value="0">Epoca da sua viagem</option>
+	                    
+	                        <option  value="32"  selected >Julho 2016</option>
+	                    
+	                        <option  value="17" >Agosto 2016</option>
+	                    
+	                        <option  value="18" >Setembro 2016</option>
+	                    
+	                        <option  value="20" >Outubro 2016</option>
+	                    
+	                        <option  value="5" >Novembro 2016</option>
+	                    
+	                        <option  value="22" >Dezembro 2016</option>
+	                    
+	                    </select>
+	          </div>
                 
-                <!--</div>-->
-                
-                
+               </div>
                 
                 
-<!--<div id="comopz31">--><script type="text/javascript">
-$(document).ready(function() {  
-  $("#slt_persone").change(function(){
-    var idper = $("#slt_periodo").val();
-	var idarea = $("#hd_idarea").val();
-	var idcat = $("#hd_idcat").val();
-   	var pers = $("#slt_persone").val();
-	var idit = $("#hd_idit").val();
-    $.ajax({
-      type: "POST",
-      url: "http://brasilplanet.colombita.it/calcolo_elenco_hotelnewjquery.asp",
-      data: "idit=" + idit + "&idarea=" + idarea + "&idcat=" + idcat + "&idper=" + idper +"&pers=" + pers ,
-      dataType: "html",
-      success: function(msg)
-      {
-        $("#comopz4").html(msg);
-      },
-      error: function()
-      {
-        alert("Chiamata fallita, si prega di riprovare ancora ...");
-      }
-    });
-	
-	
-	
-	});
-	
-	
-	
-});
-</script>
+                
+ <div class="item-selection">               
+		<div id="comopz31"><script type="text/javascript">
+		$(document).ready(function() {  
+		  $("#slt_persone").change(function(){
+		    var idper = $("#slt_periodo").val();
+			var idarea = $("#hd_idarea").val();
+			var idcat = $("#hd_idcat").val();
+		   	var pers = $("#slt_persone").val();
+			var idit = $("#hd_idit").val();
+		    $.ajax({
+		      type: "POST",
+		      url: "http://brasilplanet.colombita.it/calcolo_elenco_hotelnewjquery.asp",
+		      data: "idit=" + idit + "&idarea=" + idarea + "&idcat=" + idcat + "&idper=" + idper +"&pers=" + pers ,
+		      dataType: "html",
+		      success: function(msg)
+		      {
+		        $("#comopz4").html(msg);
+		      },
+		      error: function()
+		      {
+		        alert("Chiamata fallita, si prega di riprovare ancora ...");
+		      }
+		    });
+			
+			
+			
+			});
+			
+			
+			
+		});
+		</script>
 
 
 
-                <div class="item-selection">
+                
                     <label>Quantas pessoas</label>
                     <select name="slt_persone" id="slt_persone">
                     
@@ -934,7 +1109,7 @@ $(document).ready(function() {
                     </select>
                 </div>
                 
-  <!--</div> -->    
+  </div>     
   
   
   
@@ -956,12 +1131,19 @@ $(document).ready(function() {
 
                 
           </div>
+          <div class="item-selection">
                 
-                <!--<div id="comopz3"></div>-->
-<!--<div id="comopz2">-->
-<font color="#FF0000"></FONT>
-<!--</div>-->
-<!--<div id="comopz4">-->
+                <div id="comopz3"></div>
+            </div>
+            <div class="item-selection">
+					<div id="comopz2">
+				<font color="#FF0000"></FONT>
+				</div>
+			</div>
+			<div class="item-selection">
+					<div id="comopz4">
+				</div>
+		</div>
 
     
     

@@ -64,7 +64,7 @@ h4{
     text-align: center;
 }
 section{
-    width: 80%;
+    width: 86%;
     margin: 10px auto;
 }
 b{
@@ -116,6 +116,25 @@ p .beneficio_p{
     background-position: 50%;
     background-size: contain;
     background-repeat: no-repeat;
+}
+.hr5{
+     height: 72px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    overflow: hidden;
+    background-image: url(../img/hr_5.png);
+    border: none;
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.txt-it{
+	font-style:italic!important;
+	font-size: 0.8em;
+	display:block;
 }
 header {
     margin-top: 15px;
@@ -476,6 +495,7 @@ footer .icon, footer .type, footer .info{
 }
 footer .icon{
     width: 100%;
+    height: 60%;
     margin: 10px auto;
     border-bottom: 3px solid #fff;
 }
@@ -492,6 +512,10 @@ footer .item-map .icon{
 footer .item-map .icon img{
     width:6%;
     margin: 10px auto;
+}
+footer a{
+    text-decoration: none;
+     color: #fff;
 }
 .icon_logo{
     display: block;
@@ -797,21 +821,21 @@ footer .item-map .icon img{
     text-align: center;
     display: block;
 }
-.icon-plan-wrap .icon-plan{
+ .icon-plan{
     width: 13%;
     display: inline-block;
     vertical-align: top;
     margin: 10px;
 }
-.icon-plan-wrap .icon-plan .icon-img{
+ .icon-plan .icon-img{
     width: 70%;
 }
-.icon-plan-wrap .icon-plan .icon-type{
+ .icon-plan .icon-type{
     font-size: 0.7em;
     color: #000;
     font-weight: 600;
 }
-.icon-plan-wrap .icon-plan .icon-desc{
+ .icon-plan .icon-desc{
     font-size: 0.7em;
     color: #000;
 }
@@ -879,7 +903,7 @@ footer .item-map .icon img{
     width: 90%;
     /*font-size: 0.9em;*/
     box-shadow: 0px 0px 13px #487FFA;
-    padding: 7px 3px;
+    padding: 7px 3px 0px 3px;
 }
 .nav-plan .plan-item .plan-title{
     font-size: 0.8em;
@@ -1060,6 +1084,7 @@ footer .item-map .icon img{
     width: 100%;
     /*height: 615px;*/
     margin: 5px auto;
+    text-align: center;
 }
 .day-plan-left .day-images-wrap img{
     width: 100%;
@@ -1071,12 +1096,12 @@ footer .item-map .icon img{
 }
 .day-plan-left .day-images-wrap .img-xl{
     margin: 4px;
-    width: 98%;
+    width: 99%;
     height: 15vw;
     overflow: hidden;
     display: block;
     background-repeat:no-repeat; 
-   background-size: 100% 100%;
+   background-size: 100%;
     -moz-transition: all .5s;
     -webkit-transition: all .5s;
     transition: all .5s;
@@ -1084,7 +1109,7 @@ footer .item-map .icon img{
     
 }
 .day-plan-left .day-images-wrap .img-xl:hover{   
-   background-size: 120% 120%; 
+   background-size: 120%; 
 
 }
    
@@ -1370,6 +1395,7 @@ footer .item-map .icon img{
     margin-bottom: 10px;
     display: block;
 }
+
 .table-wrap .table-info-wrap .button-coti-1{
     position: fixed;
     right: 16px;
@@ -1386,11 +1412,13 @@ footer .item-map .icon img{
     border-radius: 28px;
     font-family: 'Libre Baskerville', serif;
     color: #ffffff;
-    font-size: 14px;
+     border: none;    
+    font-size: 12px;
     text-align: center;
-    padding: 10px 20px 10px 20px;
+    padding: 10px;
     text-decoration: none;
-    width: 76px;
+    white-space: normal;
+    width: 95px;
     margin: 30px auto;
     display: block;
     cursor: pointer;
@@ -1421,11 +1449,13 @@ footer .item-map .icon img{
     border-radius: 28px;
     font-family: 'Libre Baskerville', serif;
     color: #ffffff;
-    font-size: 14px;
+     border: none;    
+    font-size: 12px;
     text-align: center;
-    padding: 10px 20px 10px 20px;
+    padding: 10px;
     text-decoration: none;
-    width: 76px;
+    white-space: normal;
+    width: 95px;
     margin: 30px auto;
     display: block;
     cursor: pointer;
@@ -1570,9 +1600,11 @@ footer .item-map .icon img{
     font-family: 'Libre Baskerville', serif;
     color: #ffffff;
     font-size: 12px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px;
     text-decoration: none;
-    width: 122px;
+    width: 155px;
+        white-space: normal;
+        border: none;
     margin: 13px auto;
     display: block;
     cursor: pointer;
@@ -1617,10 +1649,13 @@ footer .item-map .icon img{
     }
     .nosotros-wrap .map{
         display: inline-block;
-        width: 40%;
+        width: 49%;
         vertical-align: middle;
         margin: 5px;
     }
+     .nosotros-wrap .map iframe{
+        width: 100%;
+     }
     .docus-wrap{
         display: block;
         margin:4vw auto;
@@ -1651,7 +1686,7 @@ footer .item-map .icon img{
         display: block;
         width: 95%;
         background-color: #f1f1f1;    
-        margin: auto;    
+        margin: 10px auto;    
        /* overflow: hidden;*/
     }
     .referencias-wrap .ref-wrap .ref-info{
@@ -1743,6 +1778,39 @@ footer .item-map .icon img{
         font-size: 1em;
         line-height: 20px;
     }
+    /*ref formulario*/
+        .ref{
+            width: 80%;
+            display: block;            
+            margin:5px auto;        
+
+          }
+          .refer-check{
+            display: block;            
+            margin:10px auto; 
+            padding-bottom: 10px;
+          }
+          .ref-lb{
+             display: inline-block;
+             font-style: bold;
+          }
+          
+          input[type="radio"]{
+            display: none;   
+             height: 44px;   
+          }    
+           input[type="radio"] + label span{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin:-1px 4px 0 0;
+            vertical-align:middle;
+            background: url(../img/check-buttons.jpg) left top no-repeat;
+            cursor: pointer;
+          }
+          input[type="radio"]:checked + label span{
+            background: url(../img/check-buttons.jpg) left -25px no-repeat;
+          }
 
 
 
@@ -2017,6 +2085,7 @@ footer .item-map .icon img{
         display: block;
         width: 100%;
         margin: 5px auto;
+        text-align: center;
     }
     .day-plan-left .day-images-wrap .img-s{
         width: 47%;
@@ -2321,6 +2390,7 @@ footer .item-map .icon img{
         display: block;
         width: 100%;
         margin: 5px auto;
+        text-align: center;
     }
     .day-plan-left .day-images-wrap .img-s{
         width: 48%;
@@ -2681,6 +2751,7 @@ footer .item-map .icon img{
         display: block;
         width: 100%;
         margin: 5px auto;
+        text-align: center;
     }
     .day-plan-left .day-images-wrap .img-s{
         width: 47%;

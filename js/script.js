@@ -193,6 +193,7 @@ $('.various').click(function(){
 
     /*galeria de imagenes hoteles destinos */
     $(".fancybox-thumb").fancybox({
+         padding: 0,
         prevEffect  : 'none',
         nextEffect  : 'none',
          openEffect : 'elastic',
@@ -202,17 +203,16 @@ $('.various').click(function(){
         closeSpeed  :750,
         fitToView: true,
         width       : '40%',
-        height      : '20%',
-        maxWidth       : '80%',
-        maxHeight      : '85%',
+        height      : '18%',
+        maxWidth       : '82%',
+        maxHeight      : '81%',
         autoSize    : false,
+        title   :null,
         helpers : {
-            title   : {
-                type: 'outside'
-            },
+            
            thumbs  : {
-                width   : 130,
-                height  : 130
+                width   : 40,
+                height  : 40
             },
            overlay : {
                 css : {
