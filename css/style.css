@@ -1830,7 +1830,50 @@ footer a{
            border: 1px solid #999;
            border-radius: 7px;
         }
-
+            
+ .button-coti-ref {
+    display: block;
+    margin: 5px auto;
+    z-index: 2000;
+    background: #0380FE;
+    background-image: -webkit-linear-gradient(top, #0380FE, #0a69c7);
+    background-image: -moz-linear-gradient(top, #0380FE, #0a69c7);
+    background-image: -ms-linear-gradient(top, #0380FE, #0a69c7);
+    background-image: -o-linear-gradient(top, #0380FE, #0a69c7);
+    background-image: linear-gradient(to bottom, #0380FE, #0a69c7);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: 'Libre Baskerville', serif;
+    color: #ffffff;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    white-space: normal;
+    width: 120px;
+    margin: 30px auto;
+    display: block;
+    cursor: pointer;
+}
+.wrap-ref2 p{
+    font-size: 0.9em;
+    color: #000;
+    margin-top: 5px;
+    font-weight: 600;
+}
+.wrap-ref2 .title-ref{
+    color: #0081f9;
+    font-weight: 600;
+}
+.wrap-ref2 .title-ref::before{
+    content: ' •';
+    display: inline-block;
+    font-size: 1em;
+    margin-left: 5px;
+    color: #0081f9;
+}
 
 
 @media only screen and (min-width: 900px) and (max-width: 1240px){

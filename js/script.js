@@ -260,6 +260,38 @@ $('.ref-coment').click(function(e){
     });   
 });
 
+/*desplegables formulario ref */
+
+$('.wrap-ref1').hide();
+$('.wrap-ref2').hide();
+
+ 
+
+$('input:radio[name="ref"]').change(
+    function(){
+        if (this.checked && this.value == 'ref1') {
+            $( ".wrap-ref1" ).slideToggle( "slow", function() { 
+
+            }); 
+            $( ".wrap-ref2" ).slideUp( "slow", function() { 
+
+            });   
+        }
+         if (this.checked && this.value == 'ref2') {
+            $( ".wrap-ref1" ).slideUp( "slow", function() { 
+
+            });  
+            $( ".wrap-ref2" ).slideToggle( "slow", function() { 
+
+            });   
+        }
+    });
+
+ 
+
+
+
+
 
  if($(window).width()<489) {
 
