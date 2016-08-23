@@ -1811,6 +1811,25 @@ footer a{
           input[type="radio"]:checked + label span{
             background: url(../img/check-buttons.jpg) left -25px no-repeat;
           }
+          .input-group-inline{           
+            display: inline-block;
+              width: 45%;
+        }
+          .input-group-inline label{
+          display:block;
+          margin-top: 10px;
+            font-size: 0.9em;
+        font-weight: 700;
+        }
+       .input-group-inline input{
+        width: 90%;
+           margin-top: 10px; 
+           height: 25px;
+           font-size: 0.9em;
+           color: #000;
+           border: 1px solid #999;
+           border-radius: 7px;
+        }
 
 
 
