@@ -131,6 +131,34 @@ p .beneficio_p{
     background-size: contain;
     background-repeat: no-repeat;
 }
+.hr6{
+     height: 72px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    overflow: hidden;
+    background-image: url(../img/hr_6.png);
+    border: none;
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hr7{
+     height: 72px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    overflow: hidden;
+    background-image: url(../img/hr_7.png);
+    border: none;
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .txt-it{
 	font-style:italic!important;
 	font-size: 0.8em;
@@ -220,6 +248,7 @@ nav {
     padding-bottom: 16px;
     top: 5px;
     box-sizing: border-box;
+    cursor: pointer;
  }
 
 .submenu{
@@ -235,9 +264,9 @@ nav {
     width: 45%;
     margin: 5px auto;
 }
-#leng:hover .submenu{
+/*#leng:hover .submenu{
    display: block;
-}
+}*/
 /* Underline From Center */
 
 .item:before {
@@ -642,7 +671,7 @@ footer a{
   font-size: 0.8em;
     margin: 5px 12px;
     display: block;
-    padding: 0px 5px;
+    padding:5px;
   text-decoration: none;
 }
 #provinceInfo a:hover {
@@ -742,7 +771,7 @@ footer a{
     display: inline-block;
     text-align: right;
     width: 68%;
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: #000;
     vertical-align: top;
 }
@@ -1527,6 +1556,7 @@ footer a{
 }
 .table-wrap .table-info-row2 .img-table-info .img .hover-img{
     position: absolute;
+    text-decoration: none;
     bottom: 100%;
     left: 0px;
     width: 100%;
@@ -1678,7 +1708,7 @@ footer a{
     }
     /*referencias*/
     .referencias-wrap{
-        width: 90%;
+        width: 80%;
         padding: 5px;
         display: block;
     }
@@ -1688,6 +1718,9 @@ footer a{
         background-color: #f1f1f1;    
         margin: 10px auto;    
        /* overflow: hidden;*/
+       -webkit-box-shadow: -5px 21px 58px -25px rgba(0,0,0,0.75);
+        -moz-box-shadow: -5px 21px 58px -25px rgba(0,0,0,0.75);
+        box-shadow: -5px 21px 58px -25px rgba(0,0,0,0.75);
     }
     .referencias-wrap .ref-wrap .ref-info{
         height: 17vw;
@@ -1700,7 +1733,7 @@ footer a{
     }
     .referencias-wrap .ref-wrap .ref-info  .ref-img{
         display: inline-block;
-        width: 30%;
+        width: 32%;
         margin-right: 10px;
         vertical-align: top;
     }
@@ -1708,21 +1741,21 @@ footer a{
         display: inline-block;
         width: 66%;
         height: 14vw;
-        margin-left: 10px;
+        margin-left: 16px 10px;
         vertical-align: top;
         position: relative;
     }
     .referencias-wrap .ref-wrap .ref-info  .ref-desc .ref-zone{
         display: block;
         color: #0480fe;
-        font-size: 1.5em;
+        font-size: 1.3em;
         font-weight: 600;
         text-align: left;
         margin: 5px auto;
     }
     .referencias-wrap .ref-wrap .ref-info  .ref-desc .ref-num{
         display: block;
-        font-size: 1.5em;
+        font-size: 1.3em;
         font-weight: 600;
         color: #000;
         text-align: left;
@@ -1731,6 +1764,7 @@ footer a{
     .referencias-wrap .ref-wrap  .ref-info .ref-desc .ref-coment{
         display: block;
         text-align: center;
+        font-weight: 600;
         color: #0480fe;
         font-size: 0.8em;
         width: 100%;
@@ -1874,6 +1908,10 @@ footer a{
     margin-left: 5px;
     color: #0081f9;
 }
+/*Destinos bloque mobile*/
+    .destinos-home-mob{
+        display: none;
+    }
 
 
 @media only screen and (min-width: 900px) and (max-width: 1240px){
@@ -1985,6 +2023,10 @@ footer a{
     .day-plan-left .day-images-wrap .img-xl{
          height: 15vw;
          margin: 8px;
+    }
+    /*Destinos bloque mobile*/
+    .destinos-home-mob{
+        display: none;
     }
 
 
@@ -2157,6 +2199,10 @@ footer a{
     .day-plan-left .day-images-wrap .img-xl{
         height: 180px;
     }
+    /*Destinos bloque mobile*/
+    .destinos-home-mob{
+        display: none;
+    }
 
 
 }
@@ -2317,6 +2363,9 @@ footer a{
         margin: auto 5px;
         background-color: rgba(255,255,255,1);
         width: 177px;
+    }
+    #leng  .icon{
+        display: inline-block;
     }
     .submenu {
         /* position: absolute; */
@@ -2512,6 +2561,10 @@ footer a{
     }
     .docus-wrap .txt-docu a:hover{
         font-weight: 600;
+    }
+    /*Destinos bloque mobile*/
+    .destinos-home-mob{
+        display: none;
     }
     
 
@@ -2874,6 +2927,10 @@ footer a{
     .docus-wrap .txt-docu a:hover{
         font-weight: 600;
     }
+    /*Destinos bloque mobile*/
+    .destinos-home-mob{
+        display: none;
+    }
 
 }
 @media only screen and (min-width: 320px) and (max-width: 600px) {
@@ -2901,7 +2958,7 @@ footer a{
         display: block;
         margin-top: 45px;
         overflow: hidden;
-        height: 54vw;
+        height: 116vw;
     }
     .vitrina-principal img {
     width: 100%;
@@ -2910,8 +2967,9 @@ footer a{
     .vitrina-principal .slide .title-vtr{
         position: absolute;
         /* bottom: -31%; */
-        top: 7%;
+        top: 49%;
         left: -138px;
+        font-size: 1.8em;
         padding: 2px 32px 5px 162px;
         box-sizing: border-box;
         font-family: 'Libre Baskerville', serif;
@@ -2949,12 +3007,12 @@ footer a{
         margin-top: 5%;
     }
     .box-txt .txt {
-        font-size: 0.7em;
+        font-size: 0.9em;
         color: #000;
         padding: 6px;
         display: inline-block;
         vertical-align: middle;
-        width: 69%;
+        width: 90%;
     }
     .video-container video.fillWidth {
     width: 100%!important;
@@ -3068,14 +3126,21 @@ footer a{
         width: 49px;
         height: 37px;
     }
+    /*Destinos bloque mobile*/
+    .destinos-home-mob{
+        display: block;
+    }
     /*bloques imagenes hover descripcion*/
     .destinos{
         margin: 0px;
     }
     .img-wrap{
         display: block;
-        width: 80%;
+        width: 98%;
         margin: 5px auto;
+    }
+    .img-wrap .slick-prev,.img-wrap .slick-next{
+        display: none!important;
     }
     /* Zoom In */
     .img-wrap img{
@@ -3129,7 +3194,7 @@ footer a{
         vertical-align: top;
         text-align: center;
         height: 105px;
-        margin: auto;
+        margin: 7px auto;
     }
     footer .item-map .icon {
         width: 92%;

@@ -222,6 +222,33 @@ $('.various').click(function(){
         }
     });
 
+    
+/*$('#leng .icon').click(function(){
+   console.log('click idiomas');
+});*/
+$('.submenu').hide();
+$('#leng .icon').click(function(){
+    //$('#leng .submenu').toggleClass('hide');
+
+   /* $('.submenu').toggle(function () {
+    $(".submenu").css({"display": "block"});
+    }, function () {
+        $(".submenu").css({"display": "none"});
+    });*/
+
+     $(".submenu").slideToggle(function() { 
+
+    }); 
+});
+
+/*$('#leng .icon').click(    
+    function(){$(".submenu").css({"display": "block"});
+    console.log('click idiomas');},
+    function(){$(".submenu").css({"display": "none"});
+});*/
+
+
+
 
 /*desplegables dias */
 $('.subday-mob').hide();
@@ -455,7 +482,7 @@ var brasilmap = document.getElementById("brasil-map");
         sourceImg = province.querySelector("img"),
         imgPath = "img/destinos/mapa/";
         provinceInfo.innerHTML = "";
-        provinceInfo.insertAdjacentHTML("afterbegin", "<a href='#' id='close-btn' style='display:block;background-image: url(http://brasilplanet.colombita.it/cami/css/fancybox_sprite.png);position: absolute ;top: -18px;right: -18px;    width: 36px;    height: 36px;   cursor: pointer;    z-index: 8040;'></a><img src="+imgPath + sourceImg.getAttribute('xlink:href')+" alt='"+sourceImg.getAttribute('alt')+"'><h1>"+provinceName+"</h1><ul>"+provincePara.innerHTML+"</ul></div class='img-clima'>"+provinceClima.innerHTML+"</div>");
+        provinceInfo.insertAdjacentHTML("afterbegin", "<a href='#' id='close-btn' style='display:block;background-image: url(http://brasilplanet.colombita.it/cami/css/fancybox_sprite.png);position: absolute ;top: -18px;right: -18px;    width: 30px;    height: 27px;   cursor: pointer;    z-index: 8040;'></a><img src="+imgPath + sourceImg.getAttribute('xlink:href')+" alt='"+sourceImg.getAttribute('alt')+"'><h1>"+provinceName+"</h1><ul>"+provincePara.innerHTML+"</ul></div class='img-clima'>"+provinceClima.innerHTML+"</div>");
         provinceInfo.classList.add("show");
 
         $('#close-btn').click(function(e){
