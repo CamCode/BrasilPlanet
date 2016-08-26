@@ -314,8 +314,16 @@ $('input:radio[name="ref"]').change(
         }
     });
 
+/*boton up */
+$('footer').append( "<div class='up_btn' style='display: block; position: fixed;bottom: 20px;right: 10px;width:80px;height:45px;cursor:pointer;text-align:center;'><i class='fa fa-chevron-up' style='display:block;color:#487FFA;' aria-hidden='true'></i><img src='img/logo.png'></div>" );
  
-
+ $('.up_btn').click(function(){
+            
+            var body = $("html, body");
+            body.stop().animate({scrollTop:0}, '4000', function() { 
+            
+            });
+         });
 
 
 
