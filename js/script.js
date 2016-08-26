@@ -315,7 +315,7 @@ $('input:radio[name="ref"]').change(
     });
 
 /*boton up */
-$('footer').append( "<div class='up_btn' style='display: block; position: fixed;bottom: 20px;right: 10px;width:80px;height:45px;cursor:pointer;text-align:center;'><i class='fa fa-chevron-up' style='display:block;color:#487FFA;' aria-hidden='true'></i><img src='img/logo.png'></div>" );
+$('footer').append( "<div class='up_btn' style='display: block; position: fixed;bottom: 20px;right: 10px;width:80px;height:45px;cursor:pointer;text-align:center;'><i class='fa fa-chevron-up' style='display:block;color:#487FFA;' aria-hidden='true'></i><img src='http://brasilplanet.colombita.it/cami/img/logo.png'></div>" );
  
  $('.up_btn').click(function(){
             
@@ -397,6 +397,10 @@ $('footer').append( "<div class='up_btn' style='display: block; position: fixed;
             scrollTop: $(".table-selection").offset().top
         }, 4000);
      });
+
+
+
+     $('.toggle-nav').append( "<a href='http://brasilplanet.colombita.it/cami/index.html' style='width: 73px;height: 20px;display: block; margin: auto; position: fixed;top: 3px;left: 36%;right: 35%;'><img src='http://brasilplanet.colombita.it/cami/img/logo.png'></a>" );
 
 
 

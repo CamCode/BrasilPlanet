@@ -568,8 +568,98 @@
 				</div>
 			
 		</section>
+		<!--formulario hoteles Mobiles-->
+		<section class="form-wrap-mob">
+			<div class="table-wrap">
+				<!--Boton cotizar que sale desde la parte de arriba-->
+					<div class="button-coti-1">Cotiza tu viaje</div>
+				
+				<div class="table-title">Lencois maranhenses, Delta y Jericoacoara</div>
+				<div class="table-selection">
+	    		
+				<div id="comopz1" class="item-selection">
+					<input name="hd_idarea" id="hd_idarea" type="hidden" value="50">
+					<input name="hd_idcat" id="hd_idcat" type="hidden" value="58">
+					<input name="hd_idit" id="hd_idit" type="hidden" value="36">
+				
+				Periodo
+							<select name="id_periodo" id="id_periodo" onchange="cerca_periodo();cerca_persone();cerca_moneta();cerca_messaggio();">
+								<option value="0">Seleziona Periodo</option>
+						
+							<option value="32" selected="">Julho 2016 </option>
+							
+							<option value="17">Agosto 2016 </option>
+							
+							<option value="18">Setembro 2016 </option>
+							
+							<option value="20">Outubro 2016 </option>
+							
+							<option value="5">Novembro 2016 </option>
+							
+							<option value="22">Dezembro 2016 </option>
+							
+							</select>
+				</div>
+				
+				<div id="persone" class="item-selection">	
+				Persone
+				        
+					<select name="id_persone" onchange="cerca_persone();cerca_moneta();">
+						<option value="0">Seleziona Persone</option>
 
-		<section>
+						<option value="1">1</option>
+					
+						<option value="2" selected="selected">2</option>
+					
+						<option value="3">3</option>
+					
+						<option value="4">4</option>
+					
+						<option value="5">5</option>
+					
+						<option value="6">6</option>
+					
+						<option value="7">7</option>
+					
+						<option value="8">8</option>
+					</select>
+					</div>
+				 <div id="categhotel" class="item-selection">		   
+				    
+				Categoria Hotels
+				<select name="id_tipoit" id="id_tipoit">
+				<option value="0">Selecionars</option>
+
+				<option value="36" selected="selected">*** Categoria Standard</option>
+
+				<option value="38">**** Categoria Superior</option>
+
+				</select>
+
+				</div>    
+				    
+				    <div id="moneta" class="item-selection">	
+				Moneta
+				        <br>sessionidmoneta= 3
+				    <select name="id_moneta" onchange="cerca_moneta();">
+						<option value="0">Seleziona Moneta</option>
+
+						<option value="1">USD</option>
+								
+						<option value="3" selected="selected">BRL</option>
+				    </select>
+				</div>
+
+				</div>
+				<!--boton cotizar que sale al lado del formulario-->
+				
+				<input type="button" class="button-coti-2" name="loclicco"  value="Cotiza tu viaje">
+			</div>
+
+		</section>
+		<!--FIN formulario hoteles Mobiles-->
+
+		<section class="form-wrap">
 			<h2>Formulario 2</h2>
 			<div class="table-wrap">
 				<div class="table-title">Lencois maranhenses, Delta y Jericoacoara</div>
