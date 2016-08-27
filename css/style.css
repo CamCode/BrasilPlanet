@@ -3608,6 +3608,39 @@ footer a{
         text-align: center;
         margin-bottom: 10px;
     }
+
+     .table-wrap-mob .table-subinfo2, .form1-mob-wrap .table-subinfo2{
+            font-size: 0.7em;
+            display: block;
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
+            padding: 8px 0px;
+            left: 0px;
+            z-index: 999;
+            box-sizing: border-box;
+            background-color: rgb(255,255,255);
+            text-align: center;
+    }
+    .table-wrap-mob .table-resume, .form1-mob-wrap .table-resume{
+        background-color: #F0F1F1;
+        width: 70%;
+        display: block;
+        margin: 5px auto;
+        color: #000;
+        font-size: 12px;
+        padding: 5px;
+    }
+    .table-wrap-mob .table-resume .resume-item, .form1-mob-wrap .table-resume .resume-item{
+        display: block;
+        margin: 5px;
+    }
+    .table-wrap-mob .table-resume .resume-item .fa, .form1-mob-wrap .table-resume .resume-item .fa{
+        display: inline-block;
+        width: 13px;
+        margin-right: 8px;
+    }
+
     
     
      .table-selection .item-selection label{
@@ -3661,28 +3694,29 @@ footer a{
         font-weight: 700;
     }
 
-     .table-wrap-mob .table-subinfo .txt-subinfo{
+     .table-wrap-mob .table-subinfo .txt-subinfo, .table-wrap-mob .table-subinfo2 .txt-subinfo{
         width: 30%;
         display: inline-block;
         padding: 7px;
         box-sizing: border-box;
-        color: #1FE4D2;
+        color: #487FFA;
         font-weight: 700;
         font-size: 12px;
         border-right: 1px solid #1FE4D2;
         text-align: right;
         vertical-align: middle;
     }
-    .table-wrap-mob .table-subinfo .hab-subinfo{
+    .table-wrap-mob .table-subinfo .hab-subinfo, .table-wrap-mob .table-subinfo2 .hab-subinfo{
         width: 32%;
         display: inline-block;
         padding: 0px;
+        font-weight: 600;
         box-sizing: border-box;
         color: #000;
         text-align: center;
         vertical-align: middle;
     }
-     .table-wrap-mob .table-subinfo .total-subinfo{
+     .table-wrap-mob .table-subinfo .total-subinfo, .table-wrap-mob .table-subinfo2 .total-subinfo{
         width: 31%;
         display: inline-block;
         padding: 8px;
@@ -3738,6 +3772,10 @@ footer a{
         display: block;
         margin: 2px;
      }
+     .form1-mob-wrap .hotel-wrap .mini-info .hotel-desc .hotel-stars img{
+        display: inline-block;
+        width: 17%;
+     }
      .form1-mob-wrap .hotel-wrap .mini-info .hotel-desc .hotel-location{
         font-size: 12px;
         font-weight: 700;
@@ -3789,9 +3827,9 @@ footer a{
      }
      .form1-mob-wrap .button-coti-1-mob{
         position: fixed;
-        top: 1px;
-        right: 52%;
-        left: 62%;
+        bottom: 60px;
+        right: 45%;
+        left: 35%;
         z-index: 10000;
         background: #0380FE;
         background-image: -webkit-linear-gradient(top, #0380FE, #0a69c7);

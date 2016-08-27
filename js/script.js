@@ -365,8 +365,25 @@ $('footer').append( "<div class='up_btn' style='display: block; position: fixed;
         $( wrap_txt ).slideToggle( "slow", function() { 
 
         });      
+          /*despliegue al hacer click en la imagen*/
+          
         
     });
+     $('.form1-mob-wrap .hotel-wrap .mini-info .img-hotel').click(function(e){
+        e.preventDefault();
+        var wrap_txt =  $(this).parent();
+        wrap_txt = wrap_txt.next();
+         
+        //var arrow_title = $(this).find('.fa');
+        //$('.subday-mob').slideUp();           
+        
+        $( wrap_txt ).slideToggle( "slow", function() { 
+
+        });       
+
+    });
+
+
     $('.fa-search').click(function(){  
          console.log('cambiodatos');
          $('.form1-mob-wrap .table-selection').show();          
@@ -396,6 +413,7 @@ $('footer').append( "<div class='up_btn' style='display: block; position: fixed;
         $('html, body').animate({
             scrollTop: $(".table-selection").offset().top
         }, 4000);
+        $('.form1-mob-wrap .button-coti-1-mob').hide();
      });
 
 
