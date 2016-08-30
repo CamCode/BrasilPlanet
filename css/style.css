@@ -369,6 +369,9 @@ background: #9B4534;
    height: 50vw;
 
 }
+.vitrina-principal-mob{
+    display: none;
+}
 .vitrina-principal img{
     width: 100%;
 }
@@ -470,7 +473,7 @@ background: #9B4534;
     margin: -3px;
 }
 .box-txt .txt{
-    font-size:1em;
+    font-size:0.8em;
     color: #000;
     padding: 5px;
     display: inline-block;
@@ -745,29 +748,29 @@ footer a{
 /*.box-option-wrap .box-option:hover{
     border: 3px solid #66FFCC;
 }*/
-.box-option-wrap .box-option .type{
+.box-option-wrap .type{
     display: block;
     text-decoration: none;
 }
-.box-option-wrap .box-option .type .icons-more{
+.box-option-wrap  .type .icons-more{
     display: inline-block;
     text-align: left;
     width: 64%;
     vertical-align: top;
 }
-.box-option-wrap .box-option .type .icons-more img{
+.box-option-wrap  .type .icons-more img{
     width: 21%;
 }
-.box-option-wrap .box-option .type .icons{
+.box-option-wrap  .type .icons{
     display: inline-block;
     text-align: left;
     width: 30%;
     vertical-align: top;
 }
-.box-option-wrap .box-option .type .icons img{
+.box-option-wrap  .type .icons img{
     width: 45%;
 }
-.box-option-wrap .box-option .type .txt{
+.box-option-wrap  .type .txt{
     display: inline-block;
     text-align: right;
     width: 68%;
@@ -775,12 +778,12 @@ footer a{
     color: #000;
     vertical-align: top;
 }
-.box-option-wrap .box-option .option-img-wrap{
+.box-option-wrap  .option-img-wrap{
     width: 95%;
     margin: 4px auto;
     overflow: hidden;
 }
-.box-option-wrap .box-option .option-img{
+.box-option-wrap  .option-img{
     display: block;
     width: 100%;
     margin: 2px auto;
@@ -797,11 +800,11 @@ footer a{
 
 }
 
-.box-option-wrap .box-option .description{
+.box-option-wrap  .description{
     display: block;
     text-decoration: none;
 }
-.box-option-wrap .box-option .description .title{
+.box-option-wrap .description .title{
     display: block;
     font-size: 1em;
     color: #487FFA;
@@ -810,12 +813,12 @@ footer a{
     font-weight: 600;
     margin: 2px;
 }
-.box-option-wrap .box-option .description .items{
+.box-option-wrap  .description .items{
     color: #000;
     font-size: 0.8em;   
     padding: 0px 16px;
 }
-.box-option-wrap .box-option .description .items a{
+.box-option-wrap  .description .items a{
     text-decoration: none;
     font-weight: normal;
     display: block;
@@ -824,11 +827,11 @@ footer a{
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
 }
-.box-option-wrap .box-option .description .items a:hover{
+.box-option-wrap  .description .items a:hover{
     background-color: #82E6D7;
 }
 
-.box-option-wrap .box-option .description .items li{
+.box-option-wrap .description .items li{
     margin: 3px;
 }
 
@@ -1030,6 +1033,7 @@ footer a{
 }
 .day-txt-red{
     color:#9B4534!important;
+    font-weight: 700;
 }
 .day-plan-left .day-icons{
     display: inline-block;
@@ -1729,6 +1733,17 @@ footer a{
         box-shadow: -5px 21px 58px -25px rgba(0,0,0,0.75);
     }
     .referencias-wrap .ref-wrap .ref-info{
+        height:7vw;
+        /*height: 17vw;*/
+        width: 98%;
+        background-color: #f1f1f1;
+        padding: 15px;
+        box-sizing:border-box;
+        margin: auto;
+        display: block;
+    }
+     .referencias-wrap .ref-wrap .ref-info-full{
+        /*height:7vw;*/
         height: 17vw;
         width: 98%;
         background-color: #f1f1f1;
@@ -1737,13 +1752,32 @@ footer a{
         margin: auto;
         display: block;
     }
-    .referencias-wrap .ref-wrap .ref-info  .ref-img{
+    .referencias-wrap .ref-wrap   .ref-img{
         display: inline-block;
         width: 32%;
         margin-right: 10px;
         vertical-align: top;
     }
+    .referencias-wrap .ref-wrap .ref-info{
+        height: 9vw;
+        /* height: 17vw; */
+        width: 98%;
+        background-color: #f1f1f1;
+        padding: 15px;
+        box-sizing: border-box;
+        margin: auto;
+        display: block;
+    }
+     
     .referencias-wrap .ref-wrap .ref-info  .ref-desc{
+        height: 7vw;
+        width: 80%;
+        margin: auto;
+        display: block;
+        position: relative;
+        vertical-align: top;
+    }
+     .referencias-wrap .ref-wrap .ref-info-full  .ref-desc-full{
         display: inline-block;
         width: 66%;
         height: 14vw;
@@ -1751,7 +1785,7 @@ footer a{
         vertical-align: top;
         position: relative;
     }
-    .referencias-wrap .ref-wrap .ref-info  .ref-desc .ref-zone{
+    .referencias-wrap .ref-wrap   .ref-zone{
         display: block;
         color: #0480fe;
         font-size: 1.3em;
@@ -1759,7 +1793,7 @@ footer a{
         text-align: left;
         margin: 5px auto;
     }
-    .referencias-wrap .ref-wrap .ref-info  .ref-desc .ref-num{
+    .referencias-wrap .ref-wrap   .ref-num{
         display: block;
         font-size: 1.3em;
         font-weight: 600;
@@ -1767,7 +1801,7 @@ footer a{
         text-align: left;
         margin: 5px auto;
     }
-    .referencias-wrap .ref-wrap  .ref-info .ref-desc .ref-coment{
+    .referencias-wrap .ref-wrap  .ref-coment{
         display: block;
         text-align: center;
         font-weight: 600;
@@ -1779,13 +1813,13 @@ footer a{
         bottom: 5px;
         text-decoration: none;
     }
-    .referencias-wrap .ref-wrap  .ref-info .ref-desc .ref-coment hr{
+    .referencias-wrap .ref-wrap  .ref-coment hr{
         height: 5px;
         width: 100%;
         background-color: #0480fe;
         border: none;
     }
-    .referencias-wrap .ref-wrap  .ref-info .ref-desc .ref-coment .fa{
+    .referencias-wrap .ref-wrap   .ref-coment .fa{
         font-size: 2em;
         color: #0480fe;
     }
@@ -1984,7 +2018,7 @@ footer a{
     .box-txt .icon-mob{
         display: none;
     }
-    .box-option-wrap .box-option .type .txt {
+    .box-option-wrap  .type .txt {
         display: inline-block;
         text-align: right;
         width: 68%;
@@ -1992,7 +2026,7 @@ footer a{
         color: #000;
         vertical-align: top;
     }
-    .box-option-wrap .box-option .description .items {
+    .box-option-wrap  .description .items {
         color: #000;
         font-size: 1em;
         text-align: left;
@@ -2129,7 +2163,7 @@ footer a{
         border: 3px solid #F0F1F1;
     }
 
-    .box-option-wrap .box-option .type .txt {
+    .box-option-wrap .type .txt {
         display: inline-block;
         text-align: right;
         width: 68%;
@@ -2137,7 +2171,7 @@ footer a{
         color: #000;
         vertical-align: top;
     }
-    .box-option-wrap .box-option .description .items {
+    .box-option-wrap .description .items {
         color: #000;
         font-size: 1em;
         text-align: left;
@@ -2221,13 +2255,22 @@ footer a{
         box-sizing: border-box;
     }
     .referencias-wrap .ref-wrap .ref-info{
-        height: 24vw;
+        height: 15vw;
         padding: 5px;
         box-sizing: border-box;
     }
     .referencias-wrap .ref-wrap .ref-info  .ref-desc{
         width: 64%;
-        height: 20vw;
+        height: 13vw;
+    }
+    .referencias-wrap .ref-wrap .ref-info-full{
+        height: 24vw!important;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .referencias-wrap .ref-wrap  .ref-desc-full{
+        width: 64%!important;
+        height: 20vw!important;
     }
     
 
@@ -2455,7 +2498,7 @@ footer a{
         border: 3px solid #F0F1F1;
     }
 
-    .box-option-wrap .box-option .type .txt {
+    .box-option-wrap  .type .txt {
         display: inline-block;
         text-align: right;
         width: 68%;
@@ -2463,7 +2506,7 @@ footer a{
         color: #000;
         vertical-align: top;
     }
-    .box-option-wrap .box-option .description .items {
+    .box-option-wrap .description .items {
         color: #000;
         font-size: 1em;
         text-align: left;
@@ -2602,19 +2645,29 @@ footer a{
         padding: 2px;
         box-sizing: border-box;
     }
-    .referencias-wrap .ref-wrap .ref-info{
+    .referencias-wrap .ref-wrap .ref-info-full{
         height: 24vw;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .referencias-wrap .ref-wrap  .ref-desc-full{
+        width: 64%!important;
+        height: 20vw!important;
+    }
+    .referencias-wrap .ref-wrap .ref-info{
+        height: 15vw;
         padding: 5px;
         box-sizing: border-box;
     }
     .referencias-wrap .ref-wrap .ref-info  .ref-desc{
         width: 64%;
-        height: 20vw;
+        height: 13vw;
     }
-    .referencias-wrap .ref-wrap .ref-info  .ref-desc .ref-zone{
+
+    .referencias-wrap .ref-wrap  .ref-zone{
         font-size: 1em;
     }
-    .referencias-wrap .ref-wrap .ref-info  .ref-desc .ref-num{
+    .referencias-wrap .ref-wrap  .ref-num{
         font-size: 1em;
     }
     .referencias-wrap .ref-wrap  .ref-txt-wrap .ref-txt .txt{
@@ -2851,7 +2904,7 @@ footer a{
         border: 3px solid #F0F1F1;
     }
 
-    .box-option-wrap .box-option .type .txt {
+    .box-option-wrap  .type .txt {
         display: inline-block;
         text-align: right;
         width: 68%;
@@ -2859,7 +2912,7 @@ footer a{
         color: #000;
         vertical-align: top;
     }
-    .box-option-wrap .box-option .description .items {
+    .box-option-wrap  .description .items {
         color: #000;
         font-size: 1em;
         text-align: left;
@@ -2993,6 +3046,16 @@ footer a{
         padding: 2px;
         box-sizing: border-box;
     }
+     .referencias-wrap .ref-wrap .ref-info-full{
+        height: 20vw;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .referencias-wrap .ref-wrap  .ref-desc-full{
+        width: 64%!important;
+        height: 20vw!important;
+    }
+
     .referencias-wrap .ref-wrap .ref-info{
         height: 24vw;
         padding: 5px;
@@ -3000,13 +3063,13 @@ footer a{
     }
     .referencias-wrap .ref-wrap .ref-info  .ref-desc{
         width: 64%;
-        height: 20vw;
+        height: 16vw;
     }
     
-    .referencias-wrap .ref-wrap .ref-info  .ref-desc .ref-zone{
+    .referencias-wrap .ref-wrap  .ref-zone{
         font-size: 1em;
     }
-    .referencias-wrap .ref-wrap .ref-info  .ref-desc .ref-num{
+    .referencias-wrap .ref-wrap  .ref-num{
         font-size: 1em;
     }
     .referencias-wrap .ref-wrap  .ref-txt-wrap .ref-txt .txt{
@@ -3039,17 +3102,21 @@ footer a{
     .slick-slider {
         margin-bottom: 8px!important;
     }
-    .vitrina-principal {
+    .vitrina-principal{
+        display: none!important;
+    }
+
+    .vitrina-principal-mob {
         display: block;
         margin-top: 45px;
         overflow: hidden;
-        height: 116vw;
+        height: 132vw;
     }
-    .vitrina-principal img {
-    width: 100%;
+    .vitrina-principal-mob img {
+    width: 105%;
     height: auto;
     }
-    .vitrina-principal .slide .title-vtr{
+    .vitrina-principal-mob .slide .title-vtr{
         position: absolute;
         /* bottom: -31%; */
         top: 49%;
@@ -3062,13 +3129,13 @@ footer a{
         color: #fff;
         text-align: left;
     }
-    .vitrina-principal .title-vtr .txt1{
+    .vitrina-principal-mob .title-vtr .txt1{
         font-size: 0.8em;
         width: 100%;
         background-color: rgba(0,0,0,0.7);
         padding: 6px;
     }
-    .vitrina-principal .title-vtr .txt2{
+    .vitrina-principal-mob .title-vtr .txt2{
         font-size: 0.5em;
         padding: 2px;
         background-color: rgba(0,0,0,0.4);
@@ -3215,6 +3282,73 @@ footer a{
     .destinos-home-mob{
         display: block;
     }
+    .destinos-home-mob .box-option-wrap .box-option{
+        height: 42vw; 
+        position: relative;  
+        padding: 0px;
+    }
+    .destinos-home-mob .box-option-wrap .box-option-full{
+        height: auto; 
+        width: 98%;
+        position: relative;  
+        padding: 0px;
+        margin: 5px;
+        box-sizing: border-box;
+        background-color: #F0F1F1;
+        display: inline-block;
+        vertical-align: top;
+        text-decoration: none;
+        border: 3px solid #F0F1F1;
+         -webkit-transition: 1s ease-in-out;
+        transition: 1s ease-in-out;
+    }
+    .destinos-home-mob .box-option-wrap .type{
+        position: absolute;
+        z-index: 999;
+        top: 5%;
+        width: 93%;
+        font-weight: 700;
+        padding: 11px;
+    }
+     .destinos-home-mob .box-option-wrap .type .txt{
+        width: auto!important;
+        font-size: 0.7em!important;
+        font-weight: 400;
+        background-color: rgba(0,0,0,0.7);
+        color: white!important;
+        /* color: #000; */
+        vertical-align: top;
+        padding: 4px 10px;
+        /* height: 9vw; */
+        right: 0%;
+        float: right;
+     }
+     .destinos-home-mob .box-option-wrap .type .icons{
+        float: left;
+     }
+     .destinos-home-mob .box-option-wrap .type .icons-more{
+        width: 53%!important;
+     }
+     .destinos-home-mob .box-option-wrap .option-img-wrap{
+        width: 100%;
+        margin: 2px auto;
+     }
+     .destinos-home-mob .box-option-wrap  .description .title{
+        position: absolute;
+        top: 38%;
+        font-size: 0.9em;
+        word-wrap: break-word;
+        right: 4%;
+        /* left: 0%; */
+        box-sizing: border-box;
+        display: block;
+        background-color: rgba(0,0,0,0.6);
+        padding: 6px 9px;
+        color: white;
+        text-align: right;
+     }
+    
+    
     /*bloques imagenes hover descripcion*/
     .destinos{
         margin: 0px;
@@ -3313,15 +3447,15 @@ footer a{
         text-decoration: none;
         border: 3px solid #F0F1F1;
     }
-    .box-option-wrap .box-option .description .items li {
+    .box-option-wrap  .description .items li {
         margin: 5px;
         font-size: 0.8em;
     }
-    .box-option-wrap .box-option .description .items a:hover li{
+    .box-option-wrap  .description .items a:hover li{
         background-color: #82E6D7;
     }
 
-    .box-option-wrap .box-option .type .txt {
+    .box-option-wrap  .type .txt {
         display: inline-block;
         text-align: right;
         width: 68%;
@@ -3329,27 +3463,27 @@ footer a{
         color: #000;
         vertical-align: top;
     }
-    .box-option-wrap .box-option .type .icons-more{
+    .box-option-wrap  .type .icons-more{
         display: inline-block;
         text-align: left;
         width: 92%;
         vertical-align: top;
         }
-        .box-option-wrap .box-option .type .icons-more img{
+        .box-option-wrap  .type .icons-more img{
             width: 21%;
         }
-    .box-option-wrap .box-option .type .icons {
+    .box-option-wrap .type .icons {
         display: inline-block;
         text-align: left;
         width: 28%;
         vertical-align: top;
     }
-    .box-option-wrap .box-option .description .items {
+    .box-option-wrap .description .items {
         color: #000;
         font-size: 1.1em;
         text-align: left;
     }
-    .box-option-wrap .box-option .description .title {
+    .box-option-wrap .description .title {
         display: block;
         font-size: 1em;
         color: #487FFA;
@@ -3954,27 +4088,47 @@ footer a{
     .referencias-wrap .ref-wrap{
         width: 97%;
     }
+    .referencias-wrap .ref-wrap .ref-info-full{
+        height: 75vw!important;
+        width: 98%!important;
+        background-color: #f1f1f1;
+        padding: 8px;
+    }
     .referencias-wrap .ref-wrap .ref-info{
-        height: 75vw;
+        height: 36vw;
         width: 98%;
         background-color: #f1f1f1;
         padding: 8px;
     }
-    .referencias-wrap .ref-wrap .ref-info  .ref-img{
+    .referencias-wrap .ref-wrap  .ref-img{
         display: block;
         width: 53%;
         margin: auto;
     }
-    .referencias-wrap .ref-wrap .ref-info  .ref-desc{
+    .referencias-wrap .ref-wrap  .ref-info .ref-desc{
         display: block;
         width: 97%;
-        height: 42vw;
+        height: 32vw!important;
         margin: auto;
+        /*height: 6vw;
+        width: 80%;
+        margin: auto;
+        display: block;*/
     }
-    .referencias-wrap .ref-wrap .ref-info  .ref-desc .ref-zone{
+     .referencias-wrap .ref-wrap .ref-desc-full{
+        display: block!important;
+        width: 97%!important;
+        height: 42vw!important;
+        margin: auto;
+        /*height: 6vw;
+        width: 80%;
+        margin: auto;
+        display: block;*/
+    }
+    .referencias-wrap .ref-wrap .ref-zone{
         font-size: 1em;
     }
-    .referencias-wrap .ref-wrap .ref-info  .ref-desc .ref-num{
+    .referencias-wrap .ref-wrap  .ref-num{
         font-size: 1em;
     }
     .referencias-wrap .ref-wrap  .ref-txt-wrap .ref-txt .ref-dat{
@@ -3996,9 +4150,14 @@ footer a{
     .hr6{
         height: 18px;
     }
-    .referencias-wrap .ref-wrap  .ref-info .ref-desc .ref-coment hr{
+    .referencias-wrap .ref-wrap  .ref-coment hr{
         height: 2px;
     }
+
+
+
+}
+
 
 
 }

@@ -348,6 +348,11 @@ $('footer').append( "<div class='up_btn' style='display: block; position: fixed;
         });   
     });
 
+    $('.destinos-home-mob .box-option-wrap .option-img-wrap').click(function() {
+        var img_box = $(this).parent();
+            $(img_box).toggleClass('box-option box-option-full');
+    });
+
     /*formulario 1*/
     $('.form1-mob-wrap .hotel-wrap .hotel-info .more-info').hide();
     $('.form1-mob-wrap .table-selection').hide();
@@ -392,6 +397,7 @@ $('footer').append( "<div class='up_btn' style='display: block; position: fixed;
             }, 4000);
             
          });
+
         
 
     $(window).scroll(function () {
@@ -510,16 +516,22 @@ var brasilmap = document.getElementById("brasil-map");
         provincePara = province.querySelector("desc ul");
         provinceClima = province.querySelector("desc .img-clima");
         sourceImg = province.querySelector("img"),
-        imgPath = "img/destinos/mapa/";
+        imgPath = " http://brasilplanet.colombita.it/img_home_brasil/";
         provinceInfo.innerHTML = "";
         provinceInfo.insertAdjacentHTML("afterbegin", "<a href='#' id='close-btn' style='display:block;background-image: url(http://brasilplanet.colombita.it/cami/css/fancybox_sprite.png);position: absolute ;top: -18px;right: -18px;    width: 30px;    height: 27px;   cursor: pointer;    z-index: 8040;'></a><img src="+imgPath + sourceImg.getAttribute('xlink:href')+" alt='"+sourceImg.getAttribute('alt')+"'><h1>"+provinceName+"</h1><ul>"+provincePara.innerHTML+"</ul></div class='img-clima'>"+provinceClima.innerHTML+"</div>");
         provinceInfo.classList.add("show");
+        /*imgPath = "img/destinos/mapa/";
+        provinceInfo.innerHTML = "";
+        provinceInfo.insertAdjacentHTML("afterbegin", "<a href='#' id='close-btn' style='display:block;background-image: url(http://brasilplanet.colombita.it/cami/css/fancybox_sprite.png);position: absolute ;top: -18px;right: -18px;    width: 30px;    height: 27px;   cursor: pointer;    z-index: 8040;'></a><img src="+imgPath + sourceImg.getAttribute('xlink:href')+" alt='"+sourceImg.getAttribute('alt')+"'><h1>"+provinceName+"</h1><ul>"+provincePara.innerHTML+"</ul></div class='img-clima'>"+provinceClima.innerHTML+"</div>");
+        provinceInfo.classList.add("show");*/
 
         $('#close-btn').click(function(e){
             console.log('cerrar box');
             e.preventDefault();
             $('#provinceInfo').removeClass('show');
          });
+
+        
 
         }
         
