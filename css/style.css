@@ -1955,7 +1955,89 @@ footer a{
     .form-wrap-mob{
         display: none;
     }
+/*condiciones*/
+    .pasos-main-wrap{
+        display: block;
+        width: 80%;
+        margin:auto;
+        text-align: center;
+    }
+    .pasos-main-wrap .paso-wrap{
+        display: inline-block;
+        vertical-align: top;
+        margin: 22px;
+        width: 27%;
+    }
+    .pasos-main-wrap .paso-wrap .title{
+        font-size: 1.5em;
+        color: #487FFA;
+        text-align: center;
+        display: block;
+        font-weight: 700;
+    }
+    .pasos-main-wrap .paso-wrap .icon{
+        display: block;
+        width: 45%;
+        margin: 20px auto;
+    }
+    .pasos-main-wrap .paso-wrap .txt{
+        font-weight: 700;
+        color: #000;
+        text-align: center;
+        font-size: 0.9em;
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+    .pagos-main-wrap .pago-wrap{
+        width: 90%;
+        display: block;
+        margin:5px auto;
+    }
+    .pagos-main-wrap .pago-wrap .icon{
+        width: 13%;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 30px;
+    }
+    .pagos-main-wrap .pago-wrap .txt{
+        text-align: left;
+        font-weight: 700;
+        color: #000;
+        display: inline-block;
+        vertical-align: middle;
+        width: 70%;
+    }
+    .pagos-main-wrap .pago-wrap .txt .title{
+        font-size: 1.2em;
+        display: block;
+        margin:10px auto;
+    }
+    .pagos-main-wrap .pago-wrap .txt p{
+        font-size: 0.9em;
+    }
+    .pagos-main-wrap .pago-wrap .txt a{
+        color: #000;
+    }
+    .condiciones-txt-wrap{
+        display: block;
+        width: 85%;
+        margin:10px auto;
+        padding: 10px 5px;
+        box-sizing:border-box;
 
+    }
+    .condiciones-txt-wrap p{
+        color: #000;
+        font-size: 0.9em;
+        font-weight: 700;
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+    .condiciones-txt-wrap a{
+        color: #000;
+    }
 
 @media only screen and (min-width: 900px) and (max-width: 1240px){
     .condiciones-wrap h2 .fa{
@@ -2676,6 +2758,51 @@ footer a{
     .form-wrap-mob{
         display: none;
     }
+       /*condiciones*/
+    .pasos-main-wrap{
+        display: block;
+        width: 100%;
+        margin:auto;
+        text-align: center;
+    }
+    .pasos-main-wrap h2{
+        font-size: 2em;
+        margin-top: 40px;
+    }
+    .pasos-main-wrap h3{
+        font-size: 1.5em;
+    }
+    .pasos-main-wrap .paso-wrap{
+        display: inline-block;
+        vertical-align: top;
+        margin: 15px;
+        width: 25%;
+    }
+    .pasos-main-wrap .paso-wrap .title{
+        font-size: 1.5em;
+        color: #487FFA;
+        text-align: center;
+        display: block;
+        font-weight: 700;
+    }
+    .pasos-main-wrap .paso-wrap .icon{
+        display: inline-block;
+        width: 30%;
+        margin: 20px auto;
+    }
+    .pasos-main-wrap .paso-wrap .txt{
+        font-weight: 700;
+        color: #000;
+        text-align: center;
+        font-size: 0.9em;
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+    
+
+    
+
     
 
 }
@@ -3078,6 +3205,105 @@ footer a{
      .form-wrap-mob{
         display: none;
     }
+       /*condiciones*/
+    .pasos-main-wrap{
+        display: block;
+        width: 80%;
+        margin:auto;
+        text-align: center;
+    }
+    .pasos-main-wrap h2{
+        font-size: 2em;
+        margin-top: 20px;
+    }
+    .pasos-main-wrap h3{
+        font-size: 1.5em;
+    }
+    .pasos-main-wrap .paso-wrap{
+        display: block;
+        vertical-align: top;
+        margin: 22px;
+        width: 90%;
+    }
+    .pasos-main-wrap .paso-wrap .title{
+        font-size: 1.5em;
+        color: #487FFA;
+        text-align: center;
+        display: block;
+        font-weight: 700;
+    }
+    .pasos-main-wrap .paso-wrap .icon{
+        display: block;
+        width: 70%;
+        margin: 20px auto;
+    }
+    .pasos-main-wrap .paso-wrap .txt{
+        font-weight: 700;
+        color: #000;
+        text-align: center;
+        font-size: 0.9em;
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+    .pagos-main-wrap .pago-wrap{
+        width: 90%;
+        display: block;
+        margin:5px auto;
+    }
+    .pagos-main-wrap h3{
+        font-size: 1.5em;
+    }
+    .pagos-main-wrap .pago-wrap .icon{
+        width: 30%;
+        display: block;
+        vertical-align: middle;
+        margin: 20px auto;
+    }
+    .pagos-main-wrap .pago-wrap .txt{
+        text-align: left;
+        font-weight: 700;
+        color: #000;
+        display: block;
+        vertical-align: middle;
+        width: 90%;
+        margin: auto;
+    }
+    .pagos-main-wrap .pago-wrap .txt .title{
+        font-size: 1.2em;
+        display: block;
+        margin:10px auto;
+    }
+    .pagos-main-wrap .pago-wrap .txt p{
+        font-size: 0.9em;
+        word-break: break-word;
+    }
+    .pagos-main-wrap .pago-wrap .txt a{
+        color: #000;
+    }
+    .condiciones-txt-wrap{
+        display: block;
+        width: 85%;
+        margin:10px auto;
+        padding: 10px 5px;
+        box-sizing:border-box;
+
+    }
+    .condiciones-txt-wrap h3{
+        font-size: 1.5em;
+    }
+    .condiciones-txt-wrap p{
+        color: #000;
+        font-size: 0.9em;
+        font-weight: 700;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .condiciones-txt-wrap a{
+        color: #000;
+    }
+
     
 
 }
@@ -3107,7 +3333,7 @@ footer a{
     }
 
     .vitrina-principal-mob {
-        display: block;
+        display: block!important;
         margin-top: 45px;
         overflow: hidden;
         height: 132vw;
@@ -3336,7 +3562,7 @@ footer a{
      }
      .destinos-home-mob .box-option-wrap  .description .title{
         position: absolute;
-        top: 38%;
+        top: 33%;
         font-size: 0.9em;
         word-wrap: break-word;
         right: 4%;
@@ -4153,6 +4379,106 @@ footer a{
     }
     .referencias-wrap .ref-wrap  .ref-coment hr{
         height: 2px;
+    }
+
+
+    /*condiciones*/
+    .pasos-main-wrap{
+        display: block;
+        width: 80%;
+        margin:auto;
+        text-align: center;
+    }
+    .pasos-main-wrap h2{
+        font-size: 2em;
+        margin-top: 40px;
+    }
+    .pasos-main-wrap h3{
+        font-size: 1.5em;
+    }
+    .pasos-main-wrap .paso-wrap{
+        display: block;
+        vertical-align: top;
+        margin: 22px;
+        width: 90%;
+    }
+    .pasos-main-wrap .paso-wrap .title{
+        font-size: 1.5em;
+        color: #487FFA;
+        text-align: center;
+        display: block;
+        font-weight: 700;
+    }
+    .pasos-main-wrap .paso-wrap .icon{
+        display: block;
+        width: 70%;
+        margin: 20px auto;
+    }
+    .pasos-main-wrap .paso-wrap .txt{
+        font-weight: 700;
+        color: #000;
+        text-align: center;
+        font-size: 0.9em;
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+    .pagos-main-wrap .pago-wrap{
+        width: 90%;
+        display: block;
+        margin:5px auto;
+    }
+    .pagos-main-wrap h3{
+        font-size: 1.5em;
+    }
+    .pagos-main-wrap .pago-wrap .icon{
+        width: 30%;
+        display: block;
+        vertical-align: middle;
+        margin: 20px auto;
+    }
+    .pagos-main-wrap .pago-wrap .txt{
+        text-align: left;
+        font-weight: 700;
+        color: #000;
+        display: block;
+        vertical-align: middle;
+        width: 90%;
+        margin: auto;
+    }
+    .pagos-main-wrap .pago-wrap .txt .title{
+        font-size: 1.2em;
+        display: block;
+        margin:10px auto;
+    }
+    .pagos-main-wrap .pago-wrap .txt p{
+        font-size: 0.9em;
+        word-break: break-word;
+    }
+    .pagos-main-wrap .pago-wrap .txt a{
+        color: #000;
+    }
+    .condiciones-txt-wrap{
+        display: block;
+        width: 85%;
+        margin:10px auto;
+        padding: 10px 5px;
+        box-sizing:border-box;
+
+    }
+    .condiciones-txt-wrap h3{
+        font-size: 1.5em;
+    }
+    .condiciones-txt-wrap p{
+        color: #000;
+        font-size: 0.9em;
+        font-weight: 700;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .condiciones-txt-wrap a{
+        color: #000;
     }
 
 
