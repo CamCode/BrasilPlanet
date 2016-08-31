@@ -370,7 +370,7 @@ background: #9B4534;
 
 }
 .vitrina-principal-mob{
-    display: none;
+    display: none!important;
 }
 .vitrina-principal img{
     width: 100%;
@@ -3113,14 +3113,15 @@ footer a{
         height: 132vw;
     }
     .vitrina-principal-mob img {
-    width: 105%;
+    width: 112%;
     height: auto;
     }
     .vitrina-principal-mob .slide .title-vtr{
         position: absolute;
         /* bottom: -31%; */
+        bottom: 51%;
         top: 49%;
-        left: -138px;
+        left: 15%;
         font-size: 1.8em;
         padding: 2px 32px 5px 162px;
         box-sizing: border-box;

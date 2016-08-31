@@ -33,6 +33,29 @@ $(document).ready(function(){
               ]
       });
 
+          $('.vitrina-principal-mob').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        autoplay: true,
+        pauseOnHover:false,
+        arrows:true,
+        autoplaySpeed:7000,
+       responsive: [
+               
+                {
+                  breakpoint: 380,
+                  settings: {
+                    arrows: false,
+                    autoplay: true,
+                    infinite:true,
+                    slidesToShow: 1
+                  }
+                }
+              ]
+      });
+
     
 
     if($("#myVideo").length) {
@@ -348,8 +371,12 @@ $('footer').append( "<div class='up_btn' style='display: block; position: fixed;
         });   
     });
 
-    $('.destinos-home-mob .box-option-wrap .option-img-wrap').click(function() {
-        var img_box = $(this).parent();
+    $('.destinos-home-mob .box-option-wrap .box-option').click(function() {
+        var img_box = $(this);
+         var arrow_title = $(this).find('.fa');
+        //$('.subday-mob').slideUp();   
+        
+        $(arrow_title).toggleClass('fa-chevron-down fa-chevron-up');
             $(img_box).toggleClass('box-option box-option-full');
     });
 
