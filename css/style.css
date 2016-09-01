@@ -66,6 +66,7 @@ h4{
 section{
     width: 86%;
     margin: 10px auto;
+
 }
 b{
     margin-bottom: 5px;
@@ -154,6 +155,34 @@ p .beneficio_p{
     margin-left: 0px;
     overflow: hidden;
     background-image: url(../img/hr_7.png);
+    border: none;
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hr8{
+     height: 72px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    overflow: hidden;
+    background-image: url(../img/hr_8.png);
+    border: none;
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hr9{
+     height: 72px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    overflow: hidden;
+    background-image: url(../img/hr_9.png);
     border: none;
     background-position: 50%;
     background-size: contain;
@@ -1721,6 +1750,7 @@ footer a{
         width: 80%;
         padding: 5px;
         display: block;
+        clear: both; 
     }
     .referencias-wrap .ref-wrap{
         display: block;
@@ -1931,7 +1961,12 @@ footer a{
     display: block;
     cursor: pointer;
 }
-.wrap-ref2 p{
+.wrap-faqs2{
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+.wrap-ref2 p, .wrap-faqs2 p{
     font-size: 0.9em;
     color: #000;
     margin-top: 5px;
@@ -1940,6 +1975,15 @@ footer a{
 .wrap-ref2 .title-ref{
     color: #0081f9;
     font-weight: 600;
+}
+.wrap-faq-item .title-ref{
+    color: #0081f9;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px auto;
+    padding: 10px 5px;
+    background-color: #ededed;
+    border-radius: 11px;
 }
 .wrap-ref2 .title-ref::before{
     content: ' •';
@@ -1997,7 +2041,7 @@ footer a{
     .pagos-main-wrap .pago-wrap .icon{
         width: 13%;
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: top;
         margin: 30px;
     }
     .pagos-main-wrap .pago-wrap .txt{
@@ -3532,7 +3576,7 @@ footer a{
     .destinos-home-mob .box-option-wrap .type{
         position: absolute;
         z-index: 999;
-        top: 5%;
+        top: 1%;
         width: 93%;
         font-weight: 700;
         padding: 11px;

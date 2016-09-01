@@ -310,6 +310,26 @@ $('.ref-coment').click(function(e){
     });   
 });
 
+
+/*faqs desplegable*/
+$('.wrap-faq-item p').hide();
+
+$('.wrap-faq-item .title-ref').click(function(e){
+    e.preventDefault();
+    
+    var wrap_ref =  $(this).parent();
+         wrap_ref = wrap_ref.find('p');
+    console.log(wrap_ref);
+    
+    //var arrow_title = $(this).find('.fa');
+    //$('.subday-mob').slideUp();   
+    
+    //$(arrow_title).toggleClass('fa-chevron-down fa-chevron-up');
+    $( wrap_ref ).slideToggle( "slow", function() { 
+
+    });   
+});
+
 /*desplegables formulario ref */
 
 $('.wrap-ref1').hide();
